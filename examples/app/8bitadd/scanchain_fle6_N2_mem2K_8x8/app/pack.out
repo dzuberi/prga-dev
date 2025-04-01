@@ -1,0 +1,2406 @@
+<?xml version="1.0"?>
+<block name="pack.out" instance="FPGA_packed_netlist[0]" architecture_id="SHA256:9897b6c330f915a3d98e457d1f46fb8e7ed26c8ccf6e7e21fb63900534ebd310" atom_netlist_id="SHA256:f10001ab89af689339f17658cbe8dd0c1073c4bdfe1b15e094e4e76bd947fbca">
+	<inputs>pulse clk</inputs>
+	<outputs>out:out[0] out:out[1] out:out[2] out:out[3] out:out[4] out:out[5] out:out[6] out:out[7] out:out[8] out:out[9] out:out[10] out:out[11] out:out[12] out:out[13] out:out[14] out:out[15]</outputs>
+	<clocks>clk</clocks>
+	<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[10]" instance="clb[0]" mode="default">
+		<inputs>
+			<port name="in">$true open open $false open open $false open $true open open open</port>
+			<port name="cin">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9]</port>
+		</inputs>
+		<outputs>
+			<port name="out">i_cluster[0].out[0]-&gt;direct_out_0 open i_cluster[1].out[0]-&gt;direct_out_2 open</port>
+			<port name="cout">i_cluster[1].cout[0]-&gt;direct_cout</port>
+		</outputs>
+		<clocks>
+			<port name="clk">clk</port>
+		</clocks>
+		<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[10]" instance="i_cluster[0]" mode="arith">
+			<inputs>
+				<port name="in">clb.in[0]-&gt;direct_i_cluster_i0_in_0 open open clb.in[3]-&gt;direct_i_cluster_i0_in_3 open open</port>
+				<port name="cin">clb.cin[0]-&gt;direct_i_cluster_i0_cin</port>
+			</inputs>
+			<outputs>
+				<port name="out">i_cluster_arith[0].out[0]-&gt;direct_out open</port>
+				<port name="cout">i_cluster_arith[0].cout[0]-&gt;direct_cout</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;direct_i_cluster_i0_clk</port>
+			</clocks>
+			<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[10]" instance="i_cluster_arith[0]" mode="default">
+				<inputs>
+					<port name="in">i_cluster.in[0]-&gt;direct_in open open i_cluster.in[3]-&gt;direct_in open open</port>
+					<port name="cin">i_cluster.cin[0]-&gt;direct_cin</port>
+				</inputs>
+				<outputs>
+					<port name="out">i_flipflop[0].Q[0]-&gt;mux_arith_out_0 open</port>
+					<port name="cout">i_adder[0].cout[0]-&gt;direct_arith_cout</port>
+				</outputs>
+				<clocks>
+					<port name="clk">i_cluster.clk[0]-&gt;direct_clk</port>
+				</clocks>
+				<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[10]" instance="i_adder[0]">
+					<attributes />
+					<parameters>
+						<parameter name="CIN_MODE">10</parameter>
+					</parameters>
+					<inputs>
+						<port name="a">i_lut5[0].out[0]-&gt;direct_arith_i_adder_a</port>
+						<port name="b">i_lut5[1].out[0]-&gt;direct_arith_i_adder_b</port>
+						<port name="cin">i_cluster_arith.cin[0]-&gt;direct_arith_i_adder_cin</port>
+						<port name="cin_fabric">open</port>
+					</inputs>
+					<outputs>
+						<port name="cout">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[10]</port>
+						<port name="s">$0\out[15:0][10]</port>
+						<port name="cout_fabric">open</port>
+					</outputs>
+					<clocks />
+				</block>
+				<block name="open" instance="i_lut5[0]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">i_cluster_arith.in[0]-&gt;direct_arith_i_lut5_i0_in_0 open open open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">i_lut5.in[0]-&gt;direct_in open open open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[0]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="open" instance="i_lut5[1]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open open i_cluster_arith.in[3]-&gt;direct_arith_i_lut5_i1_in_3 open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open open i_lut5.in[3]-&gt;direct_in open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[3]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="out[10]" instance="i_flipflop[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">i_adder[0].s[0]-&gt;direct_arith_i_flipflop_i0_D</port>
+					</inputs>
+					<outputs>
+						<port name="Q">out[10]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">i_cluster_arith.clk[0]-&gt;direct_arith_i_flipflop_i0_clk</port>
+					</clocks>
+				</block>
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+		<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[11]" instance="i_cluster[1]" mode="arith">
+			<inputs>
+				<port name="in">clb.in[6]-&gt;direct_i_cluster_i1_in_0 open clb.in[8]-&gt;direct_i_cluster_i1_in_2 open open open</port>
+				<port name="cin">i_cluster[0].cout[0]-&gt;direct_i_cluster_i1_cin</port>
+			</inputs>
+			<outputs>
+				<port name="out">i_cluster_arith[0].out[0]-&gt;direct_out open</port>
+				<port name="cout">i_cluster_arith[0].cout[0]-&gt;direct_cout</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;direct_i_cluster_i1_clk</port>
+			</clocks>
+			<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[11]" instance="i_cluster_arith[0]" mode="default">
+				<inputs>
+					<port name="in">i_cluster.in[0]-&gt;direct_in open i_cluster.in[2]-&gt;direct_in open open open</port>
+					<port name="cin">i_cluster.cin[0]-&gt;direct_cin</port>
+				</inputs>
+				<outputs>
+					<port name="out">i_flipflop[0].Q[0]-&gt;mux_arith_out_0 open</port>
+					<port name="cout">i_adder[0].cout[0]-&gt;direct_arith_cout</port>
+				</outputs>
+				<clocks>
+					<port name="clk">i_cluster.clk[0]-&gt;direct_clk</port>
+				</clocks>
+				<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[11]" instance="i_adder[0]">
+					<attributes />
+					<parameters>
+						<parameter name="CIN_MODE">10</parameter>
+					</parameters>
+					<inputs>
+						<port name="a">i_lut5[0].out[0]-&gt;direct_arith_i_adder_a</port>
+						<port name="b">i_lut5[1].out[0]-&gt;direct_arith_i_adder_b</port>
+						<port name="cin">i_cluster_arith.cin[0]-&gt;direct_arith_i_adder_cin</port>
+						<port name="cin_fabric">open</port>
+					</inputs>
+					<outputs>
+						<port name="cout">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[11]</port>
+						<port name="s">$0\out[15:0][11]</port>
+						<port name="cout_fabric">open</port>
+					</outputs>
+					<clocks />
+				</block>
+				<block name="open" instance="i_lut5[0]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open i_cluster_arith.in[2]-&gt;direct_arith_i_lut5_i0_in_2 open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open i_lut5.in[2]-&gt;direct_in open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[2]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="open" instance="i_lut5[1]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">i_cluster_arith.in[0]-&gt;direct_arith_i_lut5_i1_in_0 open open open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">i_lut5.in[0]-&gt;direct_in open open open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[0]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="out[11]" instance="i_flipflop[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">i_adder[0].s[0]-&gt;direct_arith_i_flipflop_i0_D</port>
+					</inputs>
+					<outputs>
+						<port name="Q">out[11]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">i_cluster_arith.clk[0]-&gt;direct_arith_i_flipflop_i0_clk</port>
+					</clocks>
+				</block>
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+	</block>
+	<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[12]" instance="clb[1]" mode="default">
+		<inputs>
+			<port name="in">$true open open $false open open $false open $true open open open</port>
+			<port name="cin">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[11]</port>
+		</inputs>
+		<outputs>
+			<port name="out">i_cluster[0].out[0]-&gt;direct_out_0 open i_cluster[1].out[0]-&gt;direct_out_2 open</port>
+			<port name="cout">i_cluster[1].cout[0]-&gt;direct_cout</port>
+		</outputs>
+		<clocks>
+			<port name="clk">clk</port>
+		</clocks>
+		<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[12]" instance="i_cluster[0]" mode="arith">
+			<inputs>
+				<port name="in">clb.in[0]-&gt;direct_i_cluster_i0_in_0 open open clb.in[3]-&gt;direct_i_cluster_i0_in_3 open open</port>
+				<port name="cin">clb.cin[0]-&gt;direct_i_cluster_i0_cin</port>
+			</inputs>
+			<outputs>
+				<port name="out">i_cluster_arith[0].out[0]-&gt;direct_out open</port>
+				<port name="cout">i_cluster_arith[0].cout[0]-&gt;direct_cout</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;direct_i_cluster_i0_clk</port>
+			</clocks>
+			<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[12]" instance="i_cluster_arith[0]" mode="default">
+				<inputs>
+					<port name="in">i_cluster.in[0]-&gt;direct_in open open i_cluster.in[3]-&gt;direct_in open open</port>
+					<port name="cin">i_cluster.cin[0]-&gt;direct_cin</port>
+				</inputs>
+				<outputs>
+					<port name="out">i_flipflop[0].Q[0]-&gt;mux_arith_out_0 open</port>
+					<port name="cout">i_adder[0].cout[0]-&gt;direct_arith_cout</port>
+				</outputs>
+				<clocks>
+					<port name="clk">i_cluster.clk[0]-&gt;direct_clk</port>
+				</clocks>
+				<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[12]" instance="i_adder[0]">
+					<attributes />
+					<parameters>
+						<parameter name="CIN_MODE">10</parameter>
+					</parameters>
+					<inputs>
+						<port name="a">i_lut5[0].out[0]-&gt;direct_arith_i_adder_a</port>
+						<port name="b">i_lut5[1].out[0]-&gt;direct_arith_i_adder_b</port>
+						<port name="cin">i_cluster_arith.cin[0]-&gt;direct_arith_i_adder_cin</port>
+						<port name="cin_fabric">open</port>
+					</inputs>
+					<outputs>
+						<port name="cout">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[12]</port>
+						<port name="s">$0\out[15:0][12]</port>
+						<port name="cout_fabric">open</port>
+					</outputs>
+					<clocks />
+				</block>
+				<block name="open" instance="i_lut5[0]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">i_cluster_arith.in[0]-&gt;direct_arith_i_lut5_i0_in_0 open open open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">i_lut5.in[0]-&gt;direct_in open open open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[0]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="open" instance="i_lut5[1]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open open i_cluster_arith.in[3]-&gt;direct_arith_i_lut5_i1_in_3 open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open open i_lut5.in[3]-&gt;direct_in open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[3]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="out[12]" instance="i_flipflop[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">i_adder[0].s[0]-&gt;direct_arith_i_flipflop_i0_D</port>
+					</inputs>
+					<outputs>
+						<port name="Q">out[12]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">i_cluster_arith.clk[0]-&gt;direct_arith_i_flipflop_i0_clk</port>
+					</clocks>
+				</block>
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+		<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[13]" instance="i_cluster[1]" mode="arith">
+			<inputs>
+				<port name="in">clb.in[6]-&gt;direct_i_cluster_i1_in_0 open clb.in[8]-&gt;direct_i_cluster_i1_in_2 open open open</port>
+				<port name="cin">i_cluster[0].cout[0]-&gt;direct_i_cluster_i1_cin</port>
+			</inputs>
+			<outputs>
+				<port name="out">i_cluster_arith[0].out[0]-&gt;direct_out open</port>
+				<port name="cout">i_cluster_arith[0].cout[0]-&gt;direct_cout</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;direct_i_cluster_i1_clk</port>
+			</clocks>
+			<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[13]" instance="i_cluster_arith[0]" mode="default">
+				<inputs>
+					<port name="in">i_cluster.in[0]-&gt;direct_in open i_cluster.in[2]-&gt;direct_in open open open</port>
+					<port name="cin">i_cluster.cin[0]-&gt;direct_cin</port>
+				</inputs>
+				<outputs>
+					<port name="out">i_flipflop[0].Q[0]-&gt;mux_arith_out_0 open</port>
+					<port name="cout">i_adder[0].cout[0]-&gt;direct_arith_cout</port>
+				</outputs>
+				<clocks>
+					<port name="clk">i_cluster.clk[0]-&gt;direct_clk</port>
+				</clocks>
+				<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[13]" instance="i_adder[0]">
+					<attributes />
+					<parameters>
+						<parameter name="CIN_MODE">10</parameter>
+					</parameters>
+					<inputs>
+						<port name="a">i_lut5[0].out[0]-&gt;direct_arith_i_adder_a</port>
+						<port name="b">i_lut5[1].out[0]-&gt;direct_arith_i_adder_b</port>
+						<port name="cin">i_cluster_arith.cin[0]-&gt;direct_arith_i_adder_cin</port>
+						<port name="cin_fabric">open</port>
+					</inputs>
+					<outputs>
+						<port name="cout">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[13]</port>
+						<port name="s">$0\out[15:0][13]</port>
+						<port name="cout_fabric">open</port>
+					</outputs>
+					<clocks />
+				</block>
+				<block name="open" instance="i_lut5[0]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open i_cluster_arith.in[2]-&gt;direct_arith_i_lut5_i0_in_2 open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open i_lut5.in[2]-&gt;direct_in open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[2]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="open" instance="i_lut5[1]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">i_cluster_arith.in[0]-&gt;direct_arith_i_lut5_i1_in_0 open open open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">i_lut5.in[0]-&gt;direct_in open open open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[0]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="out[13]" instance="i_flipflop[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">i_adder[0].s[0]-&gt;direct_arith_i_flipflop_i0_D</port>
+					</inputs>
+					<outputs>
+						<port name="Q">out[13]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">i_cluster_arith.clk[0]-&gt;direct_arith_i_flipflop_i0_clk</port>
+					</clocks>
+				</block>
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+	</block>
+	<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[14]" instance="clb[2]" mode="default">
+		<inputs>
+			<port name="in">$true open open $false open open open open open open $false open</port>
+			<port name="cin">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[13]</port>
+		</inputs>
+		<outputs>
+			<port name="out">i_cluster[0].out[0]-&gt;direct_out_0 open i_cluster[1].out[0]-&gt;direct_out_2 open</port>
+			<port name="cout">open</port>
+		</outputs>
+		<clocks>
+			<port name="clk">clk</port>
+		</clocks>
+		<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[14]" instance="i_cluster[0]" mode="arith">
+			<inputs>
+				<port name="in">clb.in[0]-&gt;direct_i_cluster_i0_in_0 open open clb.in[3]-&gt;direct_i_cluster_i0_in_3 open open</port>
+				<port name="cin">clb.cin[0]-&gt;direct_i_cluster_i0_cin</port>
+			</inputs>
+			<outputs>
+				<port name="out">i_cluster_arith[0].out[0]-&gt;direct_out open</port>
+				<port name="cout">i_cluster_arith[0].cout[0]-&gt;direct_cout</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;direct_i_cluster_i0_clk</port>
+			</clocks>
+			<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[14]" instance="i_cluster_arith[0]" mode="default">
+				<inputs>
+					<port name="in">i_cluster.in[0]-&gt;direct_in open open i_cluster.in[3]-&gt;direct_in open open</port>
+					<port name="cin">i_cluster.cin[0]-&gt;direct_cin</port>
+				</inputs>
+				<outputs>
+					<port name="out">i_flipflop[0].Q[0]-&gt;mux_arith_out_0 open</port>
+					<port name="cout">i_adder[0].cout[0]-&gt;direct_arith_cout</port>
+				</outputs>
+				<clocks>
+					<port name="clk">i_cluster.clk[0]-&gt;direct_clk</port>
+				</clocks>
+				<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[14]" instance="i_adder[0]">
+					<attributes />
+					<parameters>
+						<parameter name="CIN_MODE">10</parameter>
+					</parameters>
+					<inputs>
+						<port name="a">i_lut5[0].out[0]-&gt;direct_arith_i_adder_a</port>
+						<port name="b">i_lut5[1].out[0]-&gt;direct_arith_i_adder_b</port>
+						<port name="cin">i_cluster_arith.cin[0]-&gt;direct_arith_i_adder_cin</port>
+						<port name="cin_fabric">open</port>
+					</inputs>
+					<outputs>
+						<port name="cout">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[14]</port>
+						<port name="s">$0\out[15:0][14]</port>
+						<port name="cout_fabric">open</port>
+					</outputs>
+					<clocks />
+				</block>
+				<block name="open" instance="i_lut5[0]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">i_cluster_arith.in[0]-&gt;direct_arith_i_lut5_i0_in_0 open open open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">i_lut5.in[0]-&gt;direct_in open open open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[0]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="open" instance="i_lut5[1]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open open i_cluster_arith.in[3]-&gt;direct_arith_i_lut5_i1_in_3 open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open open i_lut5.in[3]-&gt;direct_in open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[3]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="out[14]" instance="i_flipflop[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">i_adder[0].s[0]-&gt;direct_arith_i_flipflop_i0_D</port>
+					</inputs>
+					<outputs>
+						<port name="Q">out[14]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">i_cluster_arith.clk[0]-&gt;direct_arith_i_flipflop_i0_clk</port>
+					</clocks>
+				</block>
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+		<block name="$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[15]" instance="i_cluster[1]" mode="arith">
+			<inputs>
+				<port name="in">open open open open clb.in[10]-&gt;direct_i_cluster_i1_in_4 open</port>
+				<port name="cin">i_cluster[0].cout[0]-&gt;direct_i_cluster_i1_cin</port>
+			</inputs>
+			<outputs>
+				<port name="out">i_cluster_arith[0].out[0]-&gt;direct_out open</port>
+				<port name="cout">open</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;direct_i_cluster_i1_clk</port>
+			</clocks>
+			<block name="$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[15]" instance="i_cluster_arith[0]" mode="default">
+				<inputs>
+					<port name="in">open open open open i_cluster.in[4]-&gt;direct_in open</port>
+					<port name="cin">i_cluster.cin[0]-&gt;direct_cin</port>
+				</inputs>
+				<outputs>
+					<port name="out">i_flipflop[0].Q[0]-&gt;mux_arith_out_0 open</port>
+					<port name="cout">open</port>
+				</outputs>
+				<clocks>
+					<port name="clk">i_cluster.clk[0]-&gt;direct_clk</port>
+				</clocks>
+				<block name="$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[15]" instance="i_adder[0]">
+					<attributes />
+					<parameters>
+						<parameter name="CIN_MODE">10</parameter>
+					</parameters>
+					<inputs>
+						<port name="a">i_lut5[0].out[0]-&gt;direct_arith_i_adder_a</port>
+						<port name="b">i_lut5[1].out[0]-&gt;direct_arith_i_adder_b</port>
+						<port name="cin">i_cluster_arith.cin[0]-&gt;direct_arith_i_adder_cin</port>
+						<port name="cin_fabric">open</port>
+					</inputs>
+					<outputs>
+						<port name="cout">open</port>
+						<port name="s">$0\out[15:0][15]</port>
+						<port name="cout_fabric">open</port>
+					</outputs>
+					<clocks />
+				</block>
+				<block name="open" instance="i_lut5[0]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open open open i_cluster_arith.in[4]-&gt;direct_arith_i_lut5_i0_in_4</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open open open i_lut5.in[4]-&gt;direct_in</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[4]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="open" instance="i_lut5[1]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open open open i_cluster_arith.in[4]-&gt;direct_arith_i_lut5_i1_in_4</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open open open i_lut5.in[4]-&gt;direct_in</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[4]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="out[15]" instance="i_flipflop[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">i_adder[0].s[0]-&gt;direct_arith_i_flipflop_i0_D</port>
+					</inputs>
+					<outputs>
+						<port name="Q">out[15]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">i_cluster_arith.clk[0]-&gt;direct_arith_i_flipflop_i0_clk</port>
+					</clocks>
+				</block>
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+	</block>
+	<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2]" instance="clb[3]" mode="default">
+		<inputs>
+			<port name="in">$true open open $false open open $false open $true open open open</port>
+			<port name="cin">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1]</port>
+		</inputs>
+		<outputs>
+			<port name="out">i_cluster[0].out[0]-&gt;direct_out_0 open i_cluster[1].out[0]-&gt;direct_out_2 open</port>
+			<port name="cout">i_cluster[1].cout[0]-&gt;direct_cout</port>
+		</outputs>
+		<clocks>
+			<port name="clk">clk</port>
+		</clocks>
+		<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2]" instance="i_cluster[0]" mode="arith">
+			<inputs>
+				<port name="in">clb.in[0]-&gt;direct_i_cluster_i0_in_0 open open clb.in[3]-&gt;direct_i_cluster_i0_in_3 open open</port>
+				<port name="cin">clb.cin[0]-&gt;direct_i_cluster_i0_cin</port>
+			</inputs>
+			<outputs>
+				<port name="out">i_cluster_arith[0].out[0]-&gt;direct_out open</port>
+				<port name="cout">i_cluster_arith[0].cout[0]-&gt;direct_cout</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;direct_i_cluster_i0_clk</port>
+			</clocks>
+			<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2]" instance="i_cluster_arith[0]" mode="default">
+				<inputs>
+					<port name="in">i_cluster.in[0]-&gt;direct_in open open i_cluster.in[3]-&gt;direct_in open open</port>
+					<port name="cin">i_cluster.cin[0]-&gt;direct_cin</port>
+				</inputs>
+				<outputs>
+					<port name="out">i_flipflop[0].Q[0]-&gt;mux_arith_out_0 open</port>
+					<port name="cout">i_adder[0].cout[0]-&gt;direct_arith_cout</port>
+				</outputs>
+				<clocks>
+					<port name="clk">i_cluster.clk[0]-&gt;direct_clk</port>
+				</clocks>
+				<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2]" instance="i_adder[0]">
+					<attributes />
+					<parameters>
+						<parameter name="CIN_MODE">10</parameter>
+					</parameters>
+					<inputs>
+						<port name="a">i_lut5[0].out[0]-&gt;direct_arith_i_adder_a</port>
+						<port name="b">i_lut5[1].out[0]-&gt;direct_arith_i_adder_b</port>
+						<port name="cin">i_cluster_arith.cin[0]-&gt;direct_arith_i_adder_cin</port>
+						<port name="cin_fabric">open</port>
+					</inputs>
+					<outputs>
+						<port name="cout">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2]</port>
+						<port name="s">$0\out[15:0][2]</port>
+						<port name="cout_fabric">open</port>
+					</outputs>
+					<clocks />
+				</block>
+				<block name="open" instance="i_lut5[0]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">i_cluster_arith.in[0]-&gt;direct_arith_i_lut5_i0_in_0 open open open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">i_lut5.in[0]-&gt;direct_in open open open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[0]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="open" instance="i_lut5[1]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open open i_cluster_arith.in[3]-&gt;direct_arith_i_lut5_i1_in_3 open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open open i_lut5.in[3]-&gt;direct_in open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[3]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="out[2]" instance="i_flipflop[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">i_adder[0].s[0]-&gt;direct_arith_i_flipflop_i0_D</port>
+					</inputs>
+					<outputs>
+						<port name="Q">out[2]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">i_cluster_arith.clk[0]-&gt;direct_arith_i_flipflop_i0_clk</port>
+					</clocks>
+				</block>
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+		<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3]" instance="i_cluster[1]" mode="arith">
+			<inputs>
+				<port name="in">clb.in[6]-&gt;direct_i_cluster_i1_in_0 open clb.in[8]-&gt;direct_i_cluster_i1_in_2 open open open</port>
+				<port name="cin">i_cluster[0].cout[0]-&gt;direct_i_cluster_i1_cin</port>
+			</inputs>
+			<outputs>
+				<port name="out">i_cluster_arith[0].out[0]-&gt;direct_out open</port>
+				<port name="cout">i_cluster_arith[0].cout[0]-&gt;direct_cout</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;direct_i_cluster_i1_clk</port>
+			</clocks>
+			<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3]" instance="i_cluster_arith[0]" mode="default">
+				<inputs>
+					<port name="in">i_cluster.in[0]-&gt;direct_in open i_cluster.in[2]-&gt;direct_in open open open</port>
+					<port name="cin">i_cluster.cin[0]-&gt;direct_cin</port>
+				</inputs>
+				<outputs>
+					<port name="out">i_flipflop[0].Q[0]-&gt;mux_arith_out_0 open</port>
+					<port name="cout">i_adder[0].cout[0]-&gt;direct_arith_cout</port>
+				</outputs>
+				<clocks>
+					<port name="clk">i_cluster.clk[0]-&gt;direct_clk</port>
+				</clocks>
+				<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3]" instance="i_adder[0]">
+					<attributes />
+					<parameters>
+						<parameter name="CIN_MODE">10</parameter>
+					</parameters>
+					<inputs>
+						<port name="a">i_lut5[0].out[0]-&gt;direct_arith_i_adder_a</port>
+						<port name="b">i_lut5[1].out[0]-&gt;direct_arith_i_adder_b</port>
+						<port name="cin">i_cluster_arith.cin[0]-&gt;direct_arith_i_adder_cin</port>
+						<port name="cin_fabric">open</port>
+					</inputs>
+					<outputs>
+						<port name="cout">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3]</port>
+						<port name="s">$0\out[15:0][3]</port>
+						<port name="cout_fabric">open</port>
+					</outputs>
+					<clocks />
+				</block>
+				<block name="open" instance="i_lut5[0]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open i_cluster_arith.in[2]-&gt;direct_arith_i_lut5_i0_in_2 open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open i_lut5.in[2]-&gt;direct_in open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[2]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="open" instance="i_lut5[1]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">i_cluster_arith.in[0]-&gt;direct_arith_i_lut5_i1_in_0 open open open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">i_lut5.in[0]-&gt;direct_in open open open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[0]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="out[3]" instance="i_flipflop[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">i_adder[0].s[0]-&gt;direct_arith_i_flipflop_i0_D</port>
+					</inputs>
+					<outputs>
+						<port name="Q">out[3]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">i_cluster_arith.clk[0]-&gt;direct_arith_i_flipflop_i0_clk</port>
+					</clocks>
+				</block>
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+	</block>
+	<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4]" instance="clb[4]" mode="default">
+		<inputs>
+			<port name="in">$true open open $false open open $false open $true open open open</port>
+			<port name="cin">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3]</port>
+		</inputs>
+		<outputs>
+			<port name="out">i_cluster[0].out[0]-&gt;direct_out_0 open i_cluster[1].out[0]-&gt;direct_out_2 open</port>
+			<port name="cout">i_cluster[1].cout[0]-&gt;direct_cout</port>
+		</outputs>
+		<clocks>
+			<port name="clk">clk</port>
+		</clocks>
+		<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4]" instance="i_cluster[0]" mode="arith">
+			<inputs>
+				<port name="in">clb.in[0]-&gt;direct_i_cluster_i0_in_0 open open clb.in[3]-&gt;direct_i_cluster_i0_in_3 open open</port>
+				<port name="cin">clb.cin[0]-&gt;direct_i_cluster_i0_cin</port>
+			</inputs>
+			<outputs>
+				<port name="out">i_cluster_arith[0].out[0]-&gt;direct_out open</port>
+				<port name="cout">i_cluster_arith[0].cout[0]-&gt;direct_cout</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;direct_i_cluster_i0_clk</port>
+			</clocks>
+			<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4]" instance="i_cluster_arith[0]" mode="default">
+				<inputs>
+					<port name="in">i_cluster.in[0]-&gt;direct_in open open i_cluster.in[3]-&gt;direct_in open open</port>
+					<port name="cin">i_cluster.cin[0]-&gt;direct_cin</port>
+				</inputs>
+				<outputs>
+					<port name="out">i_flipflop[0].Q[0]-&gt;mux_arith_out_0 open</port>
+					<port name="cout">i_adder[0].cout[0]-&gt;direct_arith_cout</port>
+				</outputs>
+				<clocks>
+					<port name="clk">i_cluster.clk[0]-&gt;direct_clk</port>
+				</clocks>
+				<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4]" instance="i_adder[0]">
+					<attributes />
+					<parameters>
+						<parameter name="CIN_MODE">10</parameter>
+					</parameters>
+					<inputs>
+						<port name="a">i_lut5[0].out[0]-&gt;direct_arith_i_adder_a</port>
+						<port name="b">i_lut5[1].out[0]-&gt;direct_arith_i_adder_b</port>
+						<port name="cin">i_cluster_arith.cin[0]-&gt;direct_arith_i_adder_cin</port>
+						<port name="cin_fabric">open</port>
+					</inputs>
+					<outputs>
+						<port name="cout">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4]</port>
+						<port name="s">$0\out[15:0][4]</port>
+						<port name="cout_fabric">open</port>
+					</outputs>
+					<clocks />
+				</block>
+				<block name="open" instance="i_lut5[0]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">i_cluster_arith.in[0]-&gt;direct_arith_i_lut5_i0_in_0 open open open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">i_lut5.in[0]-&gt;direct_in open open open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[0]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="open" instance="i_lut5[1]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open open i_cluster_arith.in[3]-&gt;direct_arith_i_lut5_i1_in_3 open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open open i_lut5.in[3]-&gt;direct_in open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[3]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="out[4]" instance="i_flipflop[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">i_adder[0].s[0]-&gt;direct_arith_i_flipflop_i0_D</port>
+					</inputs>
+					<outputs>
+						<port name="Q">out[4]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">i_cluster_arith.clk[0]-&gt;direct_arith_i_flipflop_i0_clk</port>
+					</clocks>
+				</block>
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+		<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5]" instance="i_cluster[1]" mode="arith">
+			<inputs>
+				<port name="in">clb.in[6]-&gt;direct_i_cluster_i1_in_0 open clb.in[8]-&gt;direct_i_cluster_i1_in_2 open open open</port>
+				<port name="cin">i_cluster[0].cout[0]-&gt;direct_i_cluster_i1_cin</port>
+			</inputs>
+			<outputs>
+				<port name="out">i_cluster_arith[0].out[0]-&gt;direct_out open</port>
+				<port name="cout">i_cluster_arith[0].cout[0]-&gt;direct_cout</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;direct_i_cluster_i1_clk</port>
+			</clocks>
+			<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5]" instance="i_cluster_arith[0]" mode="default">
+				<inputs>
+					<port name="in">i_cluster.in[0]-&gt;direct_in open i_cluster.in[2]-&gt;direct_in open open open</port>
+					<port name="cin">i_cluster.cin[0]-&gt;direct_cin</port>
+				</inputs>
+				<outputs>
+					<port name="out">i_flipflop[0].Q[0]-&gt;mux_arith_out_0 open</port>
+					<port name="cout">i_adder[0].cout[0]-&gt;direct_arith_cout</port>
+				</outputs>
+				<clocks>
+					<port name="clk">i_cluster.clk[0]-&gt;direct_clk</port>
+				</clocks>
+				<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5]" instance="i_adder[0]">
+					<attributes />
+					<parameters>
+						<parameter name="CIN_MODE">10</parameter>
+					</parameters>
+					<inputs>
+						<port name="a">i_lut5[0].out[0]-&gt;direct_arith_i_adder_a</port>
+						<port name="b">i_lut5[1].out[0]-&gt;direct_arith_i_adder_b</port>
+						<port name="cin">i_cluster_arith.cin[0]-&gt;direct_arith_i_adder_cin</port>
+						<port name="cin_fabric">open</port>
+					</inputs>
+					<outputs>
+						<port name="cout">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5]</port>
+						<port name="s">$0\out[15:0][5]</port>
+						<port name="cout_fabric">open</port>
+					</outputs>
+					<clocks />
+				</block>
+				<block name="open" instance="i_lut5[0]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open i_cluster_arith.in[2]-&gt;direct_arith_i_lut5_i0_in_2 open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open i_lut5.in[2]-&gt;direct_in open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[2]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="open" instance="i_lut5[1]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">i_cluster_arith.in[0]-&gt;direct_arith_i_lut5_i1_in_0 open open open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">i_lut5.in[0]-&gt;direct_in open open open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[0]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="out[5]" instance="i_flipflop[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">i_adder[0].s[0]-&gt;direct_arith_i_flipflop_i0_D</port>
+					</inputs>
+					<outputs>
+						<port name="Q">out[5]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">i_cluster_arith.clk[0]-&gt;direct_arith_i_flipflop_i0_clk</port>
+					</clocks>
+				</block>
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+	</block>
+	<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6]" instance="clb[5]" mode="default">
+		<inputs>
+			<port name="in">$true open open $false open open $false open $true open open open</port>
+			<port name="cin">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5]</port>
+		</inputs>
+		<outputs>
+			<port name="out">i_cluster[0].out[0]-&gt;direct_out_0 open i_cluster[1].out[0]-&gt;direct_out_2 open</port>
+			<port name="cout">i_cluster[1].cout[0]-&gt;direct_cout</port>
+		</outputs>
+		<clocks>
+			<port name="clk">clk</port>
+		</clocks>
+		<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6]" instance="i_cluster[0]" mode="arith">
+			<inputs>
+				<port name="in">clb.in[0]-&gt;direct_i_cluster_i0_in_0 open open clb.in[3]-&gt;direct_i_cluster_i0_in_3 open open</port>
+				<port name="cin">clb.cin[0]-&gt;direct_i_cluster_i0_cin</port>
+			</inputs>
+			<outputs>
+				<port name="out">i_cluster_arith[0].out[0]-&gt;direct_out open</port>
+				<port name="cout">i_cluster_arith[0].cout[0]-&gt;direct_cout</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;direct_i_cluster_i0_clk</port>
+			</clocks>
+			<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6]" instance="i_cluster_arith[0]" mode="default">
+				<inputs>
+					<port name="in">i_cluster.in[0]-&gt;direct_in open open i_cluster.in[3]-&gt;direct_in open open</port>
+					<port name="cin">i_cluster.cin[0]-&gt;direct_cin</port>
+				</inputs>
+				<outputs>
+					<port name="out">i_flipflop[0].Q[0]-&gt;mux_arith_out_0 open</port>
+					<port name="cout">i_adder[0].cout[0]-&gt;direct_arith_cout</port>
+				</outputs>
+				<clocks>
+					<port name="clk">i_cluster.clk[0]-&gt;direct_clk</port>
+				</clocks>
+				<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6]" instance="i_adder[0]">
+					<attributes />
+					<parameters>
+						<parameter name="CIN_MODE">10</parameter>
+					</parameters>
+					<inputs>
+						<port name="a">i_lut5[0].out[0]-&gt;direct_arith_i_adder_a</port>
+						<port name="b">i_lut5[1].out[0]-&gt;direct_arith_i_adder_b</port>
+						<port name="cin">i_cluster_arith.cin[0]-&gt;direct_arith_i_adder_cin</port>
+						<port name="cin_fabric">open</port>
+					</inputs>
+					<outputs>
+						<port name="cout">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6]</port>
+						<port name="s">$0\out[15:0][6]</port>
+						<port name="cout_fabric">open</port>
+					</outputs>
+					<clocks />
+				</block>
+				<block name="open" instance="i_lut5[0]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">i_cluster_arith.in[0]-&gt;direct_arith_i_lut5_i0_in_0 open open open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">i_lut5.in[0]-&gt;direct_in open open open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[0]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="open" instance="i_lut5[1]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open open i_cluster_arith.in[3]-&gt;direct_arith_i_lut5_i1_in_3 open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open open i_lut5.in[3]-&gt;direct_in open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[3]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="out[6]" instance="i_flipflop[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">i_adder[0].s[0]-&gt;direct_arith_i_flipflop_i0_D</port>
+					</inputs>
+					<outputs>
+						<port name="Q">out[6]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">i_cluster_arith.clk[0]-&gt;direct_arith_i_flipflop_i0_clk</port>
+					</clocks>
+				</block>
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+		<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7]" instance="i_cluster[1]" mode="arith">
+			<inputs>
+				<port name="in">clb.in[6]-&gt;direct_i_cluster_i1_in_0 open clb.in[8]-&gt;direct_i_cluster_i1_in_2 open open open</port>
+				<port name="cin">i_cluster[0].cout[0]-&gt;direct_i_cluster_i1_cin</port>
+			</inputs>
+			<outputs>
+				<port name="out">i_cluster_arith[0].out[0]-&gt;direct_out open</port>
+				<port name="cout">i_cluster_arith[0].cout[0]-&gt;direct_cout</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;direct_i_cluster_i1_clk</port>
+			</clocks>
+			<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7]" instance="i_cluster_arith[0]" mode="default">
+				<inputs>
+					<port name="in">i_cluster.in[0]-&gt;direct_in open i_cluster.in[2]-&gt;direct_in open open open</port>
+					<port name="cin">i_cluster.cin[0]-&gt;direct_cin</port>
+				</inputs>
+				<outputs>
+					<port name="out">i_flipflop[0].Q[0]-&gt;mux_arith_out_0 open</port>
+					<port name="cout">i_adder[0].cout[0]-&gt;direct_arith_cout</port>
+				</outputs>
+				<clocks>
+					<port name="clk">i_cluster.clk[0]-&gt;direct_clk</port>
+				</clocks>
+				<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7]" instance="i_adder[0]">
+					<attributes />
+					<parameters>
+						<parameter name="CIN_MODE">10</parameter>
+					</parameters>
+					<inputs>
+						<port name="a">i_lut5[0].out[0]-&gt;direct_arith_i_adder_a</port>
+						<port name="b">i_lut5[1].out[0]-&gt;direct_arith_i_adder_b</port>
+						<port name="cin">i_cluster_arith.cin[0]-&gt;direct_arith_i_adder_cin</port>
+						<port name="cin_fabric">open</port>
+					</inputs>
+					<outputs>
+						<port name="cout">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7]</port>
+						<port name="s">$0\out[15:0][7]</port>
+						<port name="cout_fabric">open</port>
+					</outputs>
+					<clocks />
+				</block>
+				<block name="open" instance="i_lut5[0]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open i_cluster_arith.in[2]-&gt;direct_arith_i_lut5_i0_in_2 open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open i_lut5.in[2]-&gt;direct_in open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[2]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="open" instance="i_lut5[1]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">i_cluster_arith.in[0]-&gt;direct_arith_i_lut5_i1_in_0 open open open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">i_lut5.in[0]-&gt;direct_in open open open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[0]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="out[7]" instance="i_flipflop[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">i_adder[0].s[0]-&gt;direct_arith_i_flipflop_i0_D</port>
+					</inputs>
+					<outputs>
+						<port name="Q">out[7]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">i_cluster_arith.clk[0]-&gt;direct_arith_i_flipflop_i0_clk</port>
+					</clocks>
+				</block>
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+	</block>
+	<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8]" instance="clb[6]" mode="default">
+		<inputs>
+			<port name="in">$true open open $false open open $false open $true open open open</port>
+			<port name="cin">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7]</port>
+		</inputs>
+		<outputs>
+			<port name="out">i_cluster[0].out[0]-&gt;direct_out_0 open i_cluster[1].out[0]-&gt;direct_out_2 open</port>
+			<port name="cout">i_cluster[1].cout[0]-&gt;direct_cout</port>
+		</outputs>
+		<clocks>
+			<port name="clk">clk</port>
+		</clocks>
+		<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8]" instance="i_cluster[0]" mode="arith">
+			<inputs>
+				<port name="in">clb.in[0]-&gt;direct_i_cluster_i0_in_0 open open clb.in[3]-&gt;direct_i_cluster_i0_in_3 open open</port>
+				<port name="cin">clb.cin[0]-&gt;direct_i_cluster_i0_cin</port>
+			</inputs>
+			<outputs>
+				<port name="out">i_cluster_arith[0].out[0]-&gt;direct_out open</port>
+				<port name="cout">i_cluster_arith[0].cout[0]-&gt;direct_cout</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;direct_i_cluster_i0_clk</port>
+			</clocks>
+			<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8]" instance="i_cluster_arith[0]" mode="default">
+				<inputs>
+					<port name="in">i_cluster.in[0]-&gt;direct_in open open i_cluster.in[3]-&gt;direct_in open open</port>
+					<port name="cin">i_cluster.cin[0]-&gt;direct_cin</port>
+				</inputs>
+				<outputs>
+					<port name="out">i_flipflop[0].Q[0]-&gt;mux_arith_out_0 open</port>
+					<port name="cout">i_adder[0].cout[0]-&gt;direct_arith_cout</port>
+				</outputs>
+				<clocks>
+					<port name="clk">i_cluster.clk[0]-&gt;direct_clk</port>
+				</clocks>
+				<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8]" instance="i_adder[0]">
+					<attributes />
+					<parameters>
+						<parameter name="CIN_MODE">10</parameter>
+					</parameters>
+					<inputs>
+						<port name="a">i_lut5[0].out[0]-&gt;direct_arith_i_adder_a</port>
+						<port name="b">i_lut5[1].out[0]-&gt;direct_arith_i_adder_b</port>
+						<port name="cin">i_cluster_arith.cin[0]-&gt;direct_arith_i_adder_cin</port>
+						<port name="cin_fabric">open</port>
+					</inputs>
+					<outputs>
+						<port name="cout">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8]</port>
+						<port name="s">$0\out[15:0][8]</port>
+						<port name="cout_fabric">open</port>
+					</outputs>
+					<clocks />
+				</block>
+				<block name="open" instance="i_lut5[0]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">i_cluster_arith.in[0]-&gt;direct_arith_i_lut5_i0_in_0 open open open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">i_lut5.in[0]-&gt;direct_in open open open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[0]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="open" instance="i_lut5[1]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open open i_cluster_arith.in[3]-&gt;direct_arith_i_lut5_i1_in_3 open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open open i_lut5.in[3]-&gt;direct_in open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[3]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="out[8]" instance="i_flipflop[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">i_adder[0].s[0]-&gt;direct_arith_i_flipflop_i0_D</port>
+					</inputs>
+					<outputs>
+						<port name="Q">out[8]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">i_cluster_arith.clk[0]-&gt;direct_arith_i_flipflop_i0_clk</port>
+					</clocks>
+				</block>
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+		<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9]" instance="i_cluster[1]" mode="arith">
+			<inputs>
+				<port name="in">clb.in[6]-&gt;direct_i_cluster_i1_in_0 open clb.in[8]-&gt;direct_i_cluster_i1_in_2 open open open</port>
+				<port name="cin">i_cluster[0].cout[0]-&gt;direct_i_cluster_i1_cin</port>
+			</inputs>
+			<outputs>
+				<port name="out">i_cluster_arith[0].out[0]-&gt;direct_out open</port>
+				<port name="cout">i_cluster_arith[0].cout[0]-&gt;direct_cout</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;direct_i_cluster_i1_clk</port>
+			</clocks>
+			<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9]" instance="i_cluster_arith[0]" mode="default">
+				<inputs>
+					<port name="in">i_cluster.in[0]-&gt;direct_in open i_cluster.in[2]-&gt;direct_in open open open</port>
+					<port name="cin">i_cluster.cin[0]-&gt;direct_cin</port>
+				</inputs>
+				<outputs>
+					<port name="out">i_flipflop[0].Q[0]-&gt;mux_arith_out_0 open</port>
+					<port name="cout">i_adder[0].cout[0]-&gt;direct_arith_cout</port>
+				</outputs>
+				<clocks>
+					<port name="clk">i_cluster.clk[0]-&gt;direct_clk</port>
+				</clocks>
+				<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9]" instance="i_adder[0]">
+					<attributes />
+					<parameters>
+						<parameter name="CIN_MODE">10</parameter>
+					</parameters>
+					<inputs>
+						<port name="a">i_lut5[0].out[0]-&gt;direct_arith_i_adder_a</port>
+						<port name="b">i_lut5[1].out[0]-&gt;direct_arith_i_adder_b</port>
+						<port name="cin">i_cluster_arith.cin[0]-&gt;direct_arith_i_adder_cin</port>
+						<port name="cin_fabric">open</port>
+					</inputs>
+					<outputs>
+						<port name="cout">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9]</port>
+						<port name="s">$0\out[15:0][9]</port>
+						<port name="cout_fabric">open</port>
+					</outputs>
+					<clocks />
+				</block>
+				<block name="open" instance="i_lut5[0]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open i_cluster_arith.in[2]-&gt;direct_arith_i_lut5_i0_in_2 open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open i_lut5.in[2]-&gt;direct_in open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[2]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="open" instance="i_lut5[1]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">i_cluster_arith.in[0]-&gt;direct_arith_i_lut5_i1_in_0 open open open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">i_lut5.in[0]-&gt;direct_in open open open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[0]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="out[9]" instance="i_flipflop[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">i_adder[0].s[0]-&gt;direct_arith_i_flipflop_i0_D</port>
+					</inputs>
+					<outputs>
+						<port name="Q">out[9]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">i_cluster_arith.clk[0]-&gt;direct_arith_i_flipflop_i0_clk</port>
+					</clocks>
+				</block>
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+	</block>
+	<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0]" instance="clb[7]" mode="default">
+		<inputs>
+			<port name="in">open pulse open $true open open open open open $false $true open</port>
+			<port name="cin">open</port>
+		</inputs>
+		<outputs>
+			<port name="out">i_cluster[0].out[0]-&gt;direct_out_0 open i_cluster[1].out[0]-&gt;direct_out_2 open</port>
+			<port name="cout">i_cluster[1].cout[0]-&gt;direct_cout</port>
+		</outputs>
+		<clocks>
+			<port name="clk">clk</port>
+		</clocks>
+		<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0]" instance="i_cluster[0]" mode="arith">
+			<inputs>
+				<port name="in">open clb.in[1]-&gt;direct_i_cluster_i0_in_1 open clb.in[3]-&gt;direct_i_cluster_i0_in_3 open open</port>
+				<port name="cin">open</port>
+			</inputs>
+			<outputs>
+				<port name="out">i_cluster_arith[0].out[0]-&gt;direct_out open</port>
+				<port name="cout">i_cluster_arith[0].cout[0]-&gt;direct_cout</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;direct_i_cluster_i0_clk</port>
+			</clocks>
+			<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0]" instance="i_cluster_arith[0]" mode="default">
+				<inputs>
+					<port name="in">open i_cluster.in[1]-&gt;direct_in open i_cluster.in[3]-&gt;direct_in open open</port>
+					<port name="cin">open</port>
+				</inputs>
+				<outputs>
+					<port name="out">i_flipflop[0].Q[0]-&gt;mux_arith_out_0 open</port>
+					<port name="cout">i_adder[0].cout[0]-&gt;direct_arith_cout</port>
+				</outputs>
+				<clocks>
+					<port name="clk">i_cluster.clk[0]-&gt;direct_clk</port>
+				</clocks>
+				<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0]" instance="i_adder[0]">
+					<attributes />
+					<parameters>
+						<parameter name="CIN_MODE">00</parameter>
+					</parameters>
+					<inputs>
+						<port name="a">i_lut5[0].out[0]-&gt;direct_arith_i_adder_a</port>
+						<port name="b">i_lut5[1].out[0]-&gt;direct_arith_i_adder_b</port>
+						<port name="cin">open</port>
+						<port name="cin_fabric">open</port>
+					</inputs>
+					<outputs>
+						<port name="cout">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0]</port>
+						<port name="s">$0\out[15:0][0]</port>
+						<port name="cout_fabric">open</port>
+					</outputs>
+					<clocks />
+				</block>
+				<block name="open" instance="i_lut5[0]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open open i_cluster_arith.in[3]-&gt;direct_arith_i_lut5_i0_in_3 open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open open i_lut5.in[3]-&gt;direct_in open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[3]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="open" instance="i_lut5[1]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open i_cluster_arith.in[1]-&gt;direct_arith_i_lut5_i1_in_1 open open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open i_lut5.in[1]-&gt;direct_in open open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[1]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="out[0]" instance="i_flipflop[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">i_adder[0].s[0]-&gt;direct_arith_i_flipflop_i0_D</port>
+					</inputs>
+					<outputs>
+						<port name="Q">out[0]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">i_cluster_arith.clk[0]-&gt;direct_arith_i_flipflop_i0_clk</port>
+					</clocks>
+				</block>
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+		<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1]" instance="i_cluster[1]" mode="arith">
+			<inputs>
+				<port name="in">open open open clb.in[9]-&gt;direct_i_cluster_i1_in_3 clb.in[10]-&gt;direct_i_cluster_i1_in_4 open</port>
+				<port name="cin">i_cluster[0].cout[0]-&gt;direct_i_cluster_i1_cin</port>
+			</inputs>
+			<outputs>
+				<port name="out">i_cluster_arith[0].out[0]-&gt;direct_out open</port>
+				<port name="cout">i_cluster_arith[0].cout[0]-&gt;direct_cout</port>
+			</outputs>
+			<clocks>
+				<port name="clk">clb.clk[0]-&gt;direct_i_cluster_i1_clk</port>
+			</clocks>
+			<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1]" instance="i_cluster_arith[0]" mode="default">
+				<inputs>
+					<port name="in">open open open i_cluster.in[3]-&gt;direct_in i_cluster.in[4]-&gt;direct_in open</port>
+					<port name="cin">i_cluster.cin[0]-&gt;direct_cin</port>
+				</inputs>
+				<outputs>
+					<port name="out">i_flipflop[0].Q[0]-&gt;mux_arith_out_0 open</port>
+					<port name="cout">i_adder[0].cout[0]-&gt;direct_arith_cout</port>
+				</outputs>
+				<clocks>
+					<port name="clk">i_cluster.clk[0]-&gt;direct_clk</port>
+				</clocks>
+				<block name="$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1]" instance="i_adder[0]">
+					<attributes />
+					<parameters>
+						<parameter name="CIN_MODE">10</parameter>
+					</parameters>
+					<inputs>
+						<port name="a">i_lut5[0].out[0]-&gt;direct_arith_i_adder_a</port>
+						<port name="b">i_lut5[1].out[0]-&gt;direct_arith_i_adder_b</port>
+						<port name="cin">i_cluster_arith.cin[0]-&gt;direct_arith_i_adder_cin</port>
+						<port name="cin_fabric">open</port>
+					</inputs>
+					<outputs>
+						<port name="cout">$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1]</port>
+						<port name="s">$0\out[15:0][1]</port>
+						<port name="cout_fabric">open</port>
+					</outputs>
+					<clocks />
+				</block>
+				<block name="open" instance="i_lut5[0]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open open open i_cluster_arith.in[4]-&gt;direct_arith_i_lut5_i0_in_4</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open open open i_lut5.in[4]-&gt;direct_in</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[4]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="open" instance="i_lut5[1]" mode="default" pb_type_num_modes="1">
+					<inputs>
+						<port name="in">open open open i_cluster_arith.in[3]-&gt;direct_arith_i_lut5_i1_in_3 open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="open" instance="i_lut5_lut[0]" mode="wire" pb_type_num_modes="2">
+						<inputs>
+							<port name="in">open open open i_lut5.in[3]-&gt;direct_in open</port>
+						</inputs>
+						<outputs>
+							<port name="out">i_lut5_lut[0].in[3]-&gt;complete:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+					</block>
+				</block>
+				<block name="out[1]" instance="i_flipflop[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="D">i_adder[0].s[0]-&gt;direct_arith_i_flipflop_i0_D</port>
+					</inputs>
+					<outputs>
+						<port name="Q">out[1]</port>
+					</outputs>
+					<clocks>
+						<port name="clk">i_cluster_arith.clk[0]-&gt;direct_arith_i_flipflop_i0_clk</port>
+					</clocks>
+				</block>
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+	</block>
+	<block name="$false" instance="clb[8]" mode="default">
+		<inputs>
+			<port name="in">open open open open open open open open open open open open</port>
+			<port name="cin">open</port>
+		</inputs>
+		<outputs>
+			<port name="out">open open open i_cluster[1].out[1]-&gt;direct_out_3</port>
+			<port name="cout">open</port>
+		</outputs>
+		<clocks>
+			<port name="clk">open</port>
+		</clocks>
+		<block name="open" instance="i_cluster[0]" />
+		<block name="$false" instance="i_cluster[1]" mode="lut5x2">
+			<inputs>
+				<port name="in">open open open open open open</port>
+				<port name="cin">open</port>
+			</inputs>
+			<outputs>
+				<port name="out">open i_cluster_lut5x2[0].out[1]-&gt;direct_out</port>
+				<port name="cout">open</port>
+			</outputs>
+			<clocks>
+				<port name="clk">open</port>
+			</clocks>
+			<block name="$false" instance="i_cluster_lut5x2[0]" mode="default">
+				<inputs>
+					<port name="in">open open open open open open</port>
+					<port name="cin">open</port>
+				</inputs>
+				<outputs>
+					<port name="out">open i_lut5[1].out[0]-&gt;mux_lut5x2_out_1</port>
+					<port name="cout">open</port>
+				</outputs>
+				<clocks>
+					<port name="clk">open</port>
+				</clocks>
+				<block name="open" instance="i_lut5[0]" />
+				<block name="$false" instance="i_lut5[1]" mode="default">
+					<inputs>
+						<port name="in">open open open open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="$false" instance="i_lut5_lut[0]" mode="i_lut5_lut">
+						<inputs>
+							<port name="in">open open open open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">lut[0].out[0]-&gt;direct:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+						<block name="$false" instance="lut[0]">
+							<attributes />
+							<parameters />
+							<inputs>
+								<port name="in">open open open open open</port>
+							</inputs>
+							<outputs>
+								<port name="out">$false</port>
+							</outputs>
+							<clocks />
+						</block>
+					</block>
+				</block>
+				<block name="open" instance="i_flipflop[0]" />
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+	</block>
+	<block name="$true" instance="clb[9]" mode="default">
+		<inputs>
+			<port name="in">open open open open open open open open open open open open</port>
+			<port name="cin">open</port>
+		</inputs>
+		<outputs>
+			<port name="out">open open open i_cluster[1].out[1]-&gt;direct_out_3</port>
+			<port name="cout">open</port>
+		</outputs>
+		<clocks>
+			<port name="clk">open</port>
+		</clocks>
+		<block name="open" instance="i_cluster[0]" />
+		<block name="$true" instance="i_cluster[1]" mode="lut5x2">
+			<inputs>
+				<port name="in">open open open open open open</port>
+				<port name="cin">open</port>
+			</inputs>
+			<outputs>
+				<port name="out">open i_cluster_lut5x2[0].out[1]-&gt;direct_out</port>
+				<port name="cout">open</port>
+			</outputs>
+			<clocks>
+				<port name="clk">open</port>
+			</clocks>
+			<block name="$true" instance="i_cluster_lut5x2[0]" mode="default">
+				<inputs>
+					<port name="in">open open open open open open</port>
+					<port name="cin">open</port>
+				</inputs>
+				<outputs>
+					<port name="out">open i_lut5[1].out[0]-&gt;mux_lut5x2_out_1</port>
+					<port name="cout">open</port>
+				</outputs>
+				<clocks>
+					<port name="clk">open</port>
+				</clocks>
+				<block name="open" instance="i_lut5[0]" />
+				<block name="$true" instance="i_lut5[1]" mode="default">
+					<inputs>
+						<port name="in">open open open open open</port>
+					</inputs>
+					<outputs>
+						<port name="out">i_lut5_lut[0].out[0]-&gt;direct_out</port>
+					</outputs>
+					<clocks />
+					<block name="$true" instance="i_lut5_lut[0]" mode="i_lut5_lut">
+						<inputs>
+							<port name="in">open open open open open</port>
+						</inputs>
+						<outputs>
+							<port name="out">lut[0].out[0]-&gt;direct:i_lut5_lut</port>
+						</outputs>
+						<clocks />
+						<block name="$true" instance="lut[0]">
+							<attributes />
+							<parameters />
+							<inputs>
+								<port name="in">open open open open open</port>
+							</inputs>
+							<outputs>
+								<port name="out">$true</port>
+							</outputs>
+							<clocks />
+						</block>
+					</block>
+				</block>
+				<block name="open" instance="i_flipflop[0]" />
+				<block name="open" instance="i_flipflop[1]" />
+			</block>
+		</block>
+	</block>
+	<block name="out:out[0]" instance="iob[10]" mode="default">
+		<inputs>
+			<port name="outpad">out[0]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:out[0]" instance="io[0]" mode="mode_output">
+			<inputs>
+				<port name="outpad">iob.outpad[0]-&gt;direct_io_outpad</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">open</port>
+			</outputs>
+			<clocks />
+			<block name="out:out[0]" instance="io_mode_output[0]" mode="default">
+				<inputs>
+					<port name="outpad">io.outpad[0]-&gt;direct_outpad</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">open</port>
+				</outputs>
+				<clocks />
+				<block name="out:out[0]" instance="o_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="outpad">io_mode_output.outpad[0]-&gt;direct_mode_output_o_pad_outpad</port>
+					</inputs>
+					<outputs />
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="out:out[1]" instance="iob[11]" mode="default">
+		<inputs>
+			<port name="outpad">out[1]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:out[1]" instance="io[0]" mode="mode_output">
+			<inputs>
+				<port name="outpad">iob.outpad[0]-&gt;direct_io_outpad</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">open</port>
+			</outputs>
+			<clocks />
+			<block name="out:out[1]" instance="io_mode_output[0]" mode="default">
+				<inputs>
+					<port name="outpad">io.outpad[0]-&gt;direct_outpad</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">open</port>
+				</outputs>
+				<clocks />
+				<block name="out:out[1]" instance="o_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="outpad">io_mode_output.outpad[0]-&gt;direct_mode_output_o_pad_outpad</port>
+					</inputs>
+					<outputs />
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="out:out[2]" instance="iob[12]" mode="default">
+		<inputs>
+			<port name="outpad">out[2]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:out[2]" instance="io[0]" mode="mode_output">
+			<inputs>
+				<port name="outpad">iob.outpad[0]-&gt;direct_io_outpad</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">open</port>
+			</outputs>
+			<clocks />
+			<block name="out:out[2]" instance="io_mode_output[0]" mode="default">
+				<inputs>
+					<port name="outpad">io.outpad[0]-&gt;direct_outpad</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">open</port>
+				</outputs>
+				<clocks />
+				<block name="out:out[2]" instance="o_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="outpad">io_mode_output.outpad[0]-&gt;direct_mode_output_o_pad_outpad</port>
+					</inputs>
+					<outputs />
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="out:out[3]" instance="iob[13]" mode="default">
+		<inputs>
+			<port name="outpad">out[3]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:out[3]" instance="io[0]" mode="mode_output">
+			<inputs>
+				<port name="outpad">iob.outpad[0]-&gt;direct_io_outpad</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">open</port>
+			</outputs>
+			<clocks />
+			<block name="out:out[3]" instance="io_mode_output[0]" mode="default">
+				<inputs>
+					<port name="outpad">io.outpad[0]-&gt;direct_outpad</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">open</port>
+				</outputs>
+				<clocks />
+				<block name="out:out[3]" instance="o_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="outpad">io_mode_output.outpad[0]-&gt;direct_mode_output_o_pad_outpad</port>
+					</inputs>
+					<outputs />
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="out:out[4]" instance="iob[14]" mode="default">
+		<inputs>
+			<port name="outpad">out[4]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:out[4]" instance="io[0]" mode="mode_output">
+			<inputs>
+				<port name="outpad">iob.outpad[0]-&gt;direct_io_outpad</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">open</port>
+			</outputs>
+			<clocks />
+			<block name="out:out[4]" instance="io_mode_output[0]" mode="default">
+				<inputs>
+					<port name="outpad">io.outpad[0]-&gt;direct_outpad</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">open</port>
+				</outputs>
+				<clocks />
+				<block name="out:out[4]" instance="o_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="outpad">io_mode_output.outpad[0]-&gt;direct_mode_output_o_pad_outpad</port>
+					</inputs>
+					<outputs />
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="out:out[5]" instance="iob[15]" mode="default">
+		<inputs>
+			<port name="outpad">out[5]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:out[5]" instance="io[0]" mode="mode_output">
+			<inputs>
+				<port name="outpad">iob.outpad[0]-&gt;direct_io_outpad</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">open</port>
+			</outputs>
+			<clocks />
+			<block name="out:out[5]" instance="io_mode_output[0]" mode="default">
+				<inputs>
+					<port name="outpad">io.outpad[0]-&gt;direct_outpad</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">open</port>
+				</outputs>
+				<clocks />
+				<block name="out:out[5]" instance="o_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="outpad">io_mode_output.outpad[0]-&gt;direct_mode_output_o_pad_outpad</port>
+					</inputs>
+					<outputs />
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="out:out[6]" instance="iob[16]" mode="default">
+		<inputs>
+			<port name="outpad">out[6]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:out[6]" instance="io[0]" mode="mode_output">
+			<inputs>
+				<port name="outpad">iob.outpad[0]-&gt;direct_io_outpad</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">open</port>
+			</outputs>
+			<clocks />
+			<block name="out:out[6]" instance="io_mode_output[0]" mode="default">
+				<inputs>
+					<port name="outpad">io.outpad[0]-&gt;direct_outpad</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">open</port>
+				</outputs>
+				<clocks />
+				<block name="out:out[6]" instance="o_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="outpad">io_mode_output.outpad[0]-&gt;direct_mode_output_o_pad_outpad</port>
+					</inputs>
+					<outputs />
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="out:out[7]" instance="iob[17]" mode="default">
+		<inputs>
+			<port name="outpad">out[7]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:out[7]" instance="io[0]" mode="mode_output">
+			<inputs>
+				<port name="outpad">iob.outpad[0]-&gt;direct_io_outpad</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">open</port>
+			</outputs>
+			<clocks />
+			<block name="out:out[7]" instance="io_mode_output[0]" mode="default">
+				<inputs>
+					<port name="outpad">io.outpad[0]-&gt;direct_outpad</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">open</port>
+				</outputs>
+				<clocks />
+				<block name="out:out[7]" instance="o_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="outpad">io_mode_output.outpad[0]-&gt;direct_mode_output_o_pad_outpad</port>
+					</inputs>
+					<outputs />
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="out:out[8]" instance="iob[18]" mode="default">
+		<inputs>
+			<port name="outpad">out[8]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:out[8]" instance="io[0]" mode="mode_output">
+			<inputs>
+				<port name="outpad">iob.outpad[0]-&gt;direct_io_outpad</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">open</port>
+			</outputs>
+			<clocks />
+			<block name="out:out[8]" instance="io_mode_output[0]" mode="default">
+				<inputs>
+					<port name="outpad">io.outpad[0]-&gt;direct_outpad</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">open</port>
+				</outputs>
+				<clocks />
+				<block name="out:out[8]" instance="o_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="outpad">io_mode_output.outpad[0]-&gt;direct_mode_output_o_pad_outpad</port>
+					</inputs>
+					<outputs />
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="out:out[9]" instance="iob[19]" mode="default">
+		<inputs>
+			<port name="outpad">out[9]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:out[9]" instance="io[0]" mode="mode_output">
+			<inputs>
+				<port name="outpad">iob.outpad[0]-&gt;direct_io_outpad</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">open</port>
+			</outputs>
+			<clocks />
+			<block name="out:out[9]" instance="io_mode_output[0]" mode="default">
+				<inputs>
+					<port name="outpad">io.outpad[0]-&gt;direct_outpad</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">open</port>
+				</outputs>
+				<clocks />
+				<block name="out:out[9]" instance="o_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="outpad">io_mode_output.outpad[0]-&gt;direct_mode_output_o_pad_outpad</port>
+					</inputs>
+					<outputs />
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="out:out[10]" instance="iob[20]" mode="default">
+		<inputs>
+			<port name="outpad">out[10]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:out[10]" instance="io[0]" mode="mode_output">
+			<inputs>
+				<port name="outpad">iob.outpad[0]-&gt;direct_io_outpad</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">open</port>
+			</outputs>
+			<clocks />
+			<block name="out:out[10]" instance="io_mode_output[0]" mode="default">
+				<inputs>
+					<port name="outpad">io.outpad[0]-&gt;direct_outpad</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">open</port>
+				</outputs>
+				<clocks />
+				<block name="out:out[10]" instance="o_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="outpad">io_mode_output.outpad[0]-&gt;direct_mode_output_o_pad_outpad</port>
+					</inputs>
+					<outputs />
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="out:out[11]" instance="iob[21]" mode="default">
+		<inputs>
+			<port name="outpad">out[11]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:out[11]" instance="io[0]" mode="mode_output">
+			<inputs>
+				<port name="outpad">iob.outpad[0]-&gt;direct_io_outpad</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">open</port>
+			</outputs>
+			<clocks />
+			<block name="out:out[11]" instance="io_mode_output[0]" mode="default">
+				<inputs>
+					<port name="outpad">io.outpad[0]-&gt;direct_outpad</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">open</port>
+				</outputs>
+				<clocks />
+				<block name="out:out[11]" instance="o_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="outpad">io_mode_output.outpad[0]-&gt;direct_mode_output_o_pad_outpad</port>
+					</inputs>
+					<outputs />
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="out:out[12]" instance="iob[22]" mode="default">
+		<inputs>
+			<port name="outpad">out[12]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:out[12]" instance="io[0]" mode="mode_output">
+			<inputs>
+				<port name="outpad">iob.outpad[0]-&gt;direct_io_outpad</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">open</port>
+			</outputs>
+			<clocks />
+			<block name="out:out[12]" instance="io_mode_output[0]" mode="default">
+				<inputs>
+					<port name="outpad">io.outpad[0]-&gt;direct_outpad</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">open</port>
+				</outputs>
+				<clocks />
+				<block name="out:out[12]" instance="o_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="outpad">io_mode_output.outpad[0]-&gt;direct_mode_output_o_pad_outpad</port>
+					</inputs>
+					<outputs />
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="out:out[13]" instance="iob[23]" mode="default">
+		<inputs>
+			<port name="outpad">out[13]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:out[13]" instance="io[0]" mode="mode_output">
+			<inputs>
+				<port name="outpad">iob.outpad[0]-&gt;direct_io_outpad</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">open</port>
+			</outputs>
+			<clocks />
+			<block name="out:out[13]" instance="io_mode_output[0]" mode="default">
+				<inputs>
+					<port name="outpad">io.outpad[0]-&gt;direct_outpad</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">open</port>
+				</outputs>
+				<clocks />
+				<block name="out:out[13]" instance="o_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="outpad">io_mode_output.outpad[0]-&gt;direct_mode_output_o_pad_outpad</port>
+					</inputs>
+					<outputs />
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="out:out[14]" instance="iob[24]" mode="default">
+		<inputs>
+			<port name="outpad">out[14]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:out[14]" instance="io[0]" mode="mode_output">
+			<inputs>
+				<port name="outpad">iob.outpad[0]-&gt;direct_io_outpad</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">open</port>
+			</outputs>
+			<clocks />
+			<block name="out:out[14]" instance="io_mode_output[0]" mode="default">
+				<inputs>
+					<port name="outpad">io.outpad[0]-&gt;direct_outpad</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">open</port>
+				</outputs>
+				<clocks />
+				<block name="out:out[14]" instance="o_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="outpad">io_mode_output.outpad[0]-&gt;direct_mode_output_o_pad_outpad</port>
+					</inputs>
+					<outputs />
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="out:out[15]" instance="iob[25]" mode="default">
+		<inputs>
+			<port name="outpad">out[15]</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">open</port>
+		</outputs>
+		<clocks />
+		<block name="out:out[15]" instance="io[0]" mode="mode_output">
+			<inputs>
+				<port name="outpad">iob.outpad[0]-&gt;direct_io_outpad</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">open</port>
+			</outputs>
+			<clocks />
+			<block name="out:out[15]" instance="io_mode_output[0]" mode="default">
+				<inputs>
+					<port name="outpad">io.outpad[0]-&gt;direct_outpad</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">open</port>
+				</outputs>
+				<clocks />
+				<block name="out:out[15]" instance="o_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs>
+						<port name="outpad">io_mode_output.outpad[0]-&gt;direct_mode_output_o_pad_outpad</port>
+					</inputs>
+					<outputs />
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="pulse" instance="iob[26]" mode="default">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">io[0].inpad[0]-&gt;direct_inpad</port>
+		</outputs>
+		<clocks />
+		<block name="pulse" instance="io[0]" mode="mode_input">
+			<inputs>
+				<port name="outpad">open</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">io_mode_input[0].inpad[0]-&gt;direct_inpad</port>
+			</outputs>
+			<clocks />
+			<block name="pulse" instance="io_mode_input[0]" mode="default">
+				<inputs>
+					<port name="outpad">open</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">i_pad[0].inpad[0]-&gt;direct_mode_input_inpad</port>
+				</outputs>
+				<clocks />
+				<block name="pulse" instance="i_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs />
+					<outputs>
+						<port name="inpad">pulse</port>
+					</outputs>
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+	<block name="clk" instance="iob[27]" mode="default">
+		<inputs>
+			<port name="outpad">open</port>
+		</inputs>
+		<outputs>
+			<port name="inpad">io[0].inpad[0]-&gt;direct_inpad</port>
+		</outputs>
+		<clocks />
+		<block name="clk" instance="io[0]" mode="mode_input">
+			<inputs>
+				<port name="outpad">open</port>
+			</inputs>
+			<outputs>
+				<port name="inpad">io_mode_input[0].inpad[0]-&gt;direct_inpad</port>
+			</outputs>
+			<clocks />
+			<block name="clk" instance="io_mode_input[0]" mode="default">
+				<inputs>
+					<port name="outpad">open</port>
+				</inputs>
+				<outputs>
+					<port name="inpad">i_pad[0].inpad[0]-&gt;direct_mode_input_inpad</port>
+				</outputs>
+				<clocks />
+				<block name="clk" instance="i_pad[0]">
+					<attributes />
+					<parameters />
+					<inputs />
+					<outputs>
+						<port name="inpad">clk</port>
+					</outputs>
+					<clocks />
+				</block>
+			</block>
+		</block>
+	</block>
+</block>

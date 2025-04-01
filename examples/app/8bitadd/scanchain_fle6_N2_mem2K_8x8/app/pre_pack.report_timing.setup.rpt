@@ -1,0 +1,1157 @@
+#Timing report of worst 32 path(s)
+# Unit scale: 1e-09 seconds
+# Output precision: 3
+
+#Path 1
+Startpoint: pulse.inpad[0] (.input clocked by clk)
+Endpoint  : out[15].D[0] (.latch clocked by clk)
+Path Type : setup
+
+Point                                                                                                                                 Incr      Path
+----------------------------------------------------------------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                                                                                0.000     0.000
+clock source latency                                                                                                                 0.000     0.000
+input external delay                                                                                                                 0.000     0.000
+pulse.inpad[0] (.input)                                                                                                              0.000     0.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].b[0] (m_adder)                           1.200     1.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].cout[0] (m_adder)                        0.100     1.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cin[0] (m_adder)                         1.200     2.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cout[0] (m_adder)                        0.100     2.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cin[0] (m_adder)                         1.200     3.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cout[0] (m_adder)                        0.100     3.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cin[0] (m_adder)                         1.200     5.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cout[0] (m_adder)                        0.100     5.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cin[0] (m_adder)                         1.200     6.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cout[0] (m_adder)                        0.100     6.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cin[0] (m_adder)                         1.200     7.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cout[0] (m_adder)                        0.100     7.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cin[0] (m_adder)                         1.200     9.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cout[0] (m_adder)                        0.100     9.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].cin[0] (m_adder)                         1.200    10.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].cout[0] (m_adder)                        0.100    10.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8].cin[0] (m_adder)                         1.200    11.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8].cout[0] (m_adder)                        0.100    11.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9].cin[0] (m_adder)                         1.200    12.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9].cout[0] (m_adder)                        0.100    13.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[10].cin[0] (m_adder)                        1.200    14.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[10].cout[0] (m_adder)                       0.100    14.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[11].cin[0] (m_adder)                        1.200    15.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[11].cout[0] (m_adder)                       0.100    15.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[12].cin[0] (m_adder)                        1.200    16.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[12].cout[0] (m_adder)                       0.100    16.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[13].cin[0] (m_adder)                        1.200    18.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[13].cout[0] (m_adder)                       0.100    18.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[14].cin[0] (m_adder)                        1.200    19.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[14].cout[0] (m_adder)                       0.100    19.500
+$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[15].cin[0] (m_adder)                                1.200    20.700
+$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[15].s[0] (m_adder)                                  0.100    20.800
+out[15].D[0] (.latch)                                                                                                                1.200    22.000
+data arrival time                                                                                                                             22.000
+
+clock clk (rise edge)                                                                                                                0.000     0.000
+clock source latency                                                                                                                 0.000     0.000
+clk.inpad[0] (.input)                                                                                                                0.000     0.000
+out[15].clk[0] (.latch)                                                                                                              1.200     1.200
+clock uncertainty                                                                                                                    0.000     1.200
+cell setup time                                                                                                                     -0.100     1.100
+data required time                                                                                                                             1.100
+----------------------------------------------------------------------------------------------------------------------------------------------------
+data required time                                                                                                                             1.100
+data arrival time                                                                                                                            -22.000
+----------------------------------------------------------------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                                                                             -20.900
+
+
+#Path 2
+Startpoint: pulse.inpad[0] (.input clocked by clk)
+Endpoint  : out[14].D[0] (.latch clocked by clk)
+Path Type : setup
+
+Point                                                                                                                                 Incr      Path
+----------------------------------------------------------------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                                                                                0.000     0.000
+clock source latency                                                                                                                 0.000     0.000
+input external delay                                                                                                                 0.000     0.000
+pulse.inpad[0] (.input)                                                                                                              0.000     0.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].b[0] (m_adder)                           1.200     1.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].cout[0] (m_adder)                        0.100     1.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cin[0] (m_adder)                         1.200     2.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cout[0] (m_adder)                        0.100     2.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cin[0] (m_adder)                         1.200     3.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cout[0] (m_adder)                        0.100     3.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cin[0] (m_adder)                         1.200     5.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cout[0] (m_adder)                        0.100     5.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cin[0] (m_adder)                         1.200     6.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cout[0] (m_adder)                        0.100     6.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cin[0] (m_adder)                         1.200     7.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cout[0] (m_adder)                        0.100     7.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cin[0] (m_adder)                         1.200     9.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cout[0] (m_adder)                        0.100     9.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].cin[0] (m_adder)                         1.200    10.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].cout[0] (m_adder)                        0.100    10.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8].cin[0] (m_adder)                         1.200    11.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8].cout[0] (m_adder)                        0.100    11.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9].cin[0] (m_adder)                         1.200    12.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9].cout[0] (m_adder)                        0.100    13.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[10].cin[0] (m_adder)                        1.200    14.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[10].cout[0] (m_adder)                       0.100    14.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[11].cin[0] (m_adder)                        1.200    15.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[11].cout[0] (m_adder)                       0.100    15.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[12].cin[0] (m_adder)                        1.200    16.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[12].cout[0] (m_adder)                       0.100    16.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[13].cin[0] (m_adder)                        1.200    18.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[13].cout[0] (m_adder)                       0.100    18.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[14].cin[0] (m_adder)                        1.200    19.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[14].s[0] (m_adder)                          0.100    19.500
+out[14].D[0] (.latch)                                                                                                                1.200    20.700
+data arrival time                                                                                                                             20.700
+
+clock clk (rise edge)                                                                                                                0.000     0.000
+clock source latency                                                                                                                 0.000     0.000
+clk.inpad[0] (.input)                                                                                                                0.000     0.000
+out[14].clk[0] (.latch)                                                                                                              1.200     1.200
+clock uncertainty                                                                                                                    0.000     1.200
+cell setup time                                                                                                                     -0.100     1.100
+data required time                                                                                                                             1.100
+----------------------------------------------------------------------------------------------------------------------------------------------------
+data required time                                                                                                                             1.100
+data arrival time                                                                                                                            -20.700
+----------------------------------------------------------------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                                                                             -19.600
+
+
+#Path 3
+Startpoint: pulse.inpad[0] (.input clocked by clk)
+Endpoint  : out[13].D[0] (.latch clocked by clk)
+Path Type : setup
+
+Point                                                                                                                                 Incr      Path
+----------------------------------------------------------------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                                                                                0.000     0.000
+clock source latency                                                                                                                 0.000     0.000
+input external delay                                                                                                                 0.000     0.000
+pulse.inpad[0] (.input)                                                                                                              0.000     0.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].b[0] (m_adder)                           1.200     1.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].cout[0] (m_adder)                        0.100     1.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cin[0] (m_adder)                         1.200     2.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cout[0] (m_adder)                        0.100     2.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cin[0] (m_adder)                         1.200     3.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cout[0] (m_adder)                        0.100     3.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cin[0] (m_adder)                         1.200     5.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cout[0] (m_adder)                        0.100     5.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cin[0] (m_adder)                         1.200     6.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cout[0] (m_adder)                        0.100     6.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cin[0] (m_adder)                         1.200     7.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cout[0] (m_adder)                        0.100     7.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cin[0] (m_adder)                         1.200     9.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cout[0] (m_adder)                        0.100     9.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].cin[0] (m_adder)                         1.200    10.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].cout[0] (m_adder)                        0.100    10.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8].cin[0] (m_adder)                         1.200    11.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8].cout[0] (m_adder)                        0.100    11.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9].cin[0] (m_adder)                         1.200    12.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9].cout[0] (m_adder)                        0.100    13.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[10].cin[0] (m_adder)                        1.200    14.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[10].cout[0] (m_adder)                       0.100    14.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[11].cin[0] (m_adder)                        1.200    15.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[11].cout[0] (m_adder)                       0.100    15.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[12].cin[0] (m_adder)                        1.200    16.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[12].cout[0] (m_adder)                       0.100    16.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[13].cin[0] (m_adder)                        1.200    18.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[13].s[0] (m_adder)                          0.100    18.200
+out[13].D[0] (.latch)                                                                                                                1.200    19.400
+data arrival time                                                                                                                             19.400
+
+clock clk (rise edge)                                                                                                                0.000     0.000
+clock source latency                                                                                                                 0.000     0.000
+clk.inpad[0] (.input)                                                                                                                0.000     0.000
+out[13].clk[0] (.latch)                                                                                                              1.200     1.200
+clock uncertainty                                                                                                                    0.000     1.200
+cell setup time                                                                                                                     -0.100     1.100
+data required time                                                                                                                             1.100
+----------------------------------------------------------------------------------------------------------------------------------------------------
+data required time                                                                                                                             1.100
+data arrival time                                                                                                                            -19.400
+----------------------------------------------------------------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                                                                             -18.300
+
+
+#Path 4
+Startpoint: pulse.inpad[0] (.input clocked by clk)
+Endpoint  : out[12].D[0] (.latch clocked by clk)
+Path Type : setup
+
+Point                                                                                                                                 Incr      Path
+----------------------------------------------------------------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                                                                                0.000     0.000
+clock source latency                                                                                                                 0.000     0.000
+input external delay                                                                                                                 0.000     0.000
+pulse.inpad[0] (.input)                                                                                                              0.000     0.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].b[0] (m_adder)                           1.200     1.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].cout[0] (m_adder)                        0.100     1.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cin[0] (m_adder)                         1.200     2.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cout[0] (m_adder)                        0.100     2.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cin[0] (m_adder)                         1.200     3.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cout[0] (m_adder)                        0.100     3.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cin[0] (m_adder)                         1.200     5.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cout[0] (m_adder)                        0.100     5.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cin[0] (m_adder)                         1.200     6.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cout[0] (m_adder)                        0.100     6.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cin[0] (m_adder)                         1.200     7.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cout[0] (m_adder)                        0.100     7.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cin[0] (m_adder)                         1.200     9.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cout[0] (m_adder)                        0.100     9.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].cin[0] (m_adder)                         1.200    10.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].cout[0] (m_adder)                        0.100    10.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8].cin[0] (m_adder)                         1.200    11.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8].cout[0] (m_adder)                        0.100    11.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9].cin[0] (m_adder)                         1.200    12.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9].cout[0] (m_adder)                        0.100    13.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[10].cin[0] (m_adder)                        1.200    14.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[10].cout[0] (m_adder)                       0.100    14.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[11].cin[0] (m_adder)                        1.200    15.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[11].cout[0] (m_adder)                       0.100    15.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[12].cin[0] (m_adder)                        1.200    16.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[12].s[0] (m_adder)                          0.100    16.900
+out[12].D[0] (.latch)                                                                                                                1.200    18.100
+data arrival time                                                                                                                             18.100
+
+clock clk (rise edge)                                                                                                                0.000     0.000
+clock source latency                                                                                                                 0.000     0.000
+clk.inpad[0] (.input)                                                                                                                0.000     0.000
+out[12].clk[0] (.latch)                                                                                                              1.200     1.200
+clock uncertainty                                                                                                                    0.000     1.200
+cell setup time                                                                                                                     -0.100     1.100
+data required time                                                                                                                             1.100
+----------------------------------------------------------------------------------------------------------------------------------------------------
+data required time                                                                                                                             1.100
+data arrival time                                                                                                                            -18.100
+----------------------------------------------------------------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                                                                             -17.000
+
+
+#Path 5
+Startpoint: pulse.inpad[0] (.input clocked by clk)
+Endpoint  : out[11].D[0] (.latch clocked by clk)
+Path Type : setup
+
+Point                                                                                                                                 Incr      Path
+----------------------------------------------------------------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                                                                                0.000     0.000
+clock source latency                                                                                                                 0.000     0.000
+input external delay                                                                                                                 0.000     0.000
+pulse.inpad[0] (.input)                                                                                                              0.000     0.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].b[0] (m_adder)                           1.200     1.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].cout[0] (m_adder)                        0.100     1.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cin[0] (m_adder)                         1.200     2.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cout[0] (m_adder)                        0.100     2.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cin[0] (m_adder)                         1.200     3.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cout[0] (m_adder)                        0.100     3.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cin[0] (m_adder)                         1.200     5.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cout[0] (m_adder)                        0.100     5.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cin[0] (m_adder)                         1.200     6.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cout[0] (m_adder)                        0.100     6.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cin[0] (m_adder)                         1.200     7.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cout[0] (m_adder)                        0.100     7.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cin[0] (m_adder)                         1.200     9.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cout[0] (m_adder)                        0.100     9.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].cin[0] (m_adder)                         1.200    10.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].cout[0] (m_adder)                        0.100    10.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8].cin[0] (m_adder)                         1.200    11.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8].cout[0] (m_adder)                        0.100    11.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9].cin[0] (m_adder)                         1.200    12.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9].cout[0] (m_adder)                        0.100    13.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[10].cin[0] (m_adder)                        1.200    14.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[10].cout[0] (m_adder)                       0.100    14.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[11].cin[0] (m_adder)                        1.200    15.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[11].s[0] (m_adder)                          0.100    15.600
+out[11].D[0] (.latch)                                                                                                                1.200    16.800
+data arrival time                                                                                                                             16.800
+
+clock clk (rise edge)                                                                                                                0.000     0.000
+clock source latency                                                                                                                 0.000     0.000
+clk.inpad[0] (.input)                                                                                                                0.000     0.000
+out[11].clk[0] (.latch)                                                                                                              1.200     1.200
+clock uncertainty                                                                                                                    0.000     1.200
+cell setup time                                                                                                                     -0.100     1.100
+data required time                                                                                                                             1.100
+----------------------------------------------------------------------------------------------------------------------------------------------------
+data required time                                                                                                                             1.100
+data arrival time                                                                                                                            -16.800
+----------------------------------------------------------------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                                                                             -15.700
+
+
+#Path 6
+Startpoint: pulse.inpad[0] (.input clocked by clk)
+Endpoint  : out[10].D[0] (.latch clocked by clk)
+Path Type : setup
+
+Point                                                                                                                                Incr      Path
+---------------------------------------------------------------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+input external delay                                                                                                                0.000     0.000
+pulse.inpad[0] (.input)                                                                                                             0.000     0.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].b[0] (m_adder)                          1.200     1.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].cout[0] (m_adder)                       0.100     1.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cin[0] (m_adder)                        1.200     2.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cout[0] (m_adder)                       0.100     2.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cin[0] (m_adder)                        1.200     3.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cout[0] (m_adder)                       0.100     3.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cin[0] (m_adder)                        1.200     5.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cout[0] (m_adder)                       0.100     5.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cin[0] (m_adder)                        1.200     6.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cout[0] (m_adder)                       0.100     6.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cin[0] (m_adder)                        1.200     7.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cout[0] (m_adder)                       0.100     7.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cin[0] (m_adder)                        1.200     9.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cout[0] (m_adder)                       0.100     9.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].cin[0] (m_adder)                        1.200    10.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].cout[0] (m_adder)                       0.100    10.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8].cin[0] (m_adder)                        1.200    11.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8].cout[0] (m_adder)                       0.100    11.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9].cin[0] (m_adder)                        1.200    12.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9].cout[0] (m_adder)                       0.100    13.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[10].cin[0] (m_adder)                       1.200    14.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[10].s[0] (m_adder)                         0.100    14.300
+out[10].D[0] (.latch)                                                                                                               1.200    15.500
+data arrival time                                                                                                                            15.500
+
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+clk.inpad[0] (.input)                                                                                                               0.000     0.000
+out[10].clk[0] (.latch)                                                                                                             1.200     1.200
+clock uncertainty                                                                                                                   0.000     1.200
+cell setup time                                                                                                                    -0.100     1.100
+data required time                                                                                                                            1.100
+---------------------------------------------------------------------------------------------------------------------------------------------------
+data required time                                                                                                                            1.100
+data arrival time                                                                                                                           -15.500
+---------------------------------------------------------------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                                                                            -14.400
+
+
+#Path 7
+Startpoint: pulse.inpad[0] (.input clocked by clk)
+Endpoint  : out[9].D[0] (.latch clocked by clk)
+Path Type : setup
+
+Point                                                                                                                                Incr      Path
+---------------------------------------------------------------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+input external delay                                                                                                                0.000     0.000
+pulse.inpad[0] (.input)                                                                                                             0.000     0.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].b[0] (m_adder)                          1.200     1.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].cout[0] (m_adder)                       0.100     1.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cin[0] (m_adder)                        1.200     2.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cout[0] (m_adder)                       0.100     2.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cin[0] (m_adder)                        1.200     3.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cout[0] (m_adder)                       0.100     3.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cin[0] (m_adder)                        1.200     5.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cout[0] (m_adder)                       0.100     5.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cin[0] (m_adder)                        1.200     6.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cout[0] (m_adder)                       0.100     6.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cin[0] (m_adder)                        1.200     7.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cout[0] (m_adder)                       0.100     7.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cin[0] (m_adder)                        1.200     9.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cout[0] (m_adder)                       0.100     9.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].cin[0] (m_adder)                        1.200    10.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].cout[0] (m_adder)                       0.100    10.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8].cin[0] (m_adder)                        1.200    11.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8].cout[0] (m_adder)                       0.100    11.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9].cin[0] (m_adder)                        1.200    12.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[9].s[0] (m_adder)                          0.100    13.000
+out[9].D[0] (.latch)                                                                                                                1.200    14.200
+data arrival time                                                                                                                            14.200
+
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+clk.inpad[0] (.input)                                                                                                               0.000     0.000
+out[9].clk[0] (.latch)                                                                                                              1.200     1.200
+clock uncertainty                                                                                                                   0.000     1.200
+cell setup time                                                                                                                    -0.100     1.100
+data required time                                                                                                                            1.100
+---------------------------------------------------------------------------------------------------------------------------------------------------
+data required time                                                                                                                            1.100
+data arrival time                                                                                                                           -14.200
+---------------------------------------------------------------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                                                                            -13.100
+
+
+#Path 8
+Startpoint: pulse.inpad[0] (.input clocked by clk)
+Endpoint  : out[8].D[0] (.latch clocked by clk)
+Path Type : setup
+
+Point                                                                                                                                Incr      Path
+---------------------------------------------------------------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+input external delay                                                                                                                0.000     0.000
+pulse.inpad[0] (.input)                                                                                                             0.000     0.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].b[0] (m_adder)                          1.200     1.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].cout[0] (m_adder)                       0.100     1.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cin[0] (m_adder)                        1.200     2.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cout[0] (m_adder)                       0.100     2.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cin[0] (m_adder)                        1.200     3.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cout[0] (m_adder)                       0.100     3.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cin[0] (m_adder)                        1.200     5.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cout[0] (m_adder)                       0.100     5.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cin[0] (m_adder)                        1.200     6.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cout[0] (m_adder)                       0.100     6.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cin[0] (m_adder)                        1.200     7.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cout[0] (m_adder)                       0.100     7.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cin[0] (m_adder)                        1.200     9.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cout[0] (m_adder)                       0.100     9.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].cin[0] (m_adder)                        1.200    10.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].cout[0] (m_adder)                       0.100    10.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8].cin[0] (m_adder)                        1.200    11.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[8].s[0] (m_adder)                          0.100    11.700
+out[8].D[0] (.latch)                                                                                                                1.200    12.900
+data arrival time                                                                                                                            12.900
+
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+clk.inpad[0] (.input)                                                                                                               0.000     0.000
+out[8].clk[0] (.latch)                                                                                                              1.200     1.200
+clock uncertainty                                                                                                                   0.000     1.200
+cell setup time                                                                                                                    -0.100     1.100
+data required time                                                                                                                            1.100
+---------------------------------------------------------------------------------------------------------------------------------------------------
+data required time                                                                                                                            1.100
+data arrival time                                                                                                                           -12.900
+---------------------------------------------------------------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                                                                            -11.800
+
+
+#Path 9
+Startpoint: pulse.inpad[0] (.input clocked by clk)
+Endpoint  : out[7].D[0] (.latch clocked by clk)
+Path Type : setup
+
+Point                                                                                                                                Incr      Path
+---------------------------------------------------------------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+input external delay                                                                                                                0.000     0.000
+pulse.inpad[0] (.input)                                                                                                             0.000     0.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].b[0] (m_adder)                          1.200     1.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].cout[0] (m_adder)                       0.100     1.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cin[0] (m_adder)                        1.200     2.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cout[0] (m_adder)                       0.100     2.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cin[0] (m_adder)                        1.200     3.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cout[0] (m_adder)                       0.100     3.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cin[0] (m_adder)                        1.200     5.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cout[0] (m_adder)                       0.100     5.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cin[0] (m_adder)                        1.200     6.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cout[0] (m_adder)                       0.100     6.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cin[0] (m_adder)                        1.200     7.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cout[0] (m_adder)                       0.100     7.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cin[0] (m_adder)                        1.200     9.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cout[0] (m_adder)                       0.100     9.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].cin[0] (m_adder)                        1.200    10.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[7].s[0] (m_adder)                          0.100    10.400
+out[7].D[0] (.latch)                                                                                                                1.200    11.600
+data arrival time                                                                                                                            11.600
+
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+clk.inpad[0] (.input)                                                                                                               0.000     0.000
+out[7].clk[0] (.latch)                                                                                                              1.200     1.200
+clock uncertainty                                                                                                                   0.000     1.200
+cell setup time                                                                                                                    -0.100     1.100
+data required time                                                                                                                            1.100
+---------------------------------------------------------------------------------------------------------------------------------------------------
+data required time                                                                                                                            1.100
+data arrival time                                                                                                                           -11.600
+---------------------------------------------------------------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                                                                            -10.500
+
+
+#Path 10
+Startpoint: pulse.inpad[0] (.input clocked by clk)
+Endpoint  : out[6].D[0] (.latch clocked by clk)
+Path Type : setup
+
+Point                                                                                                                                Incr      Path
+---------------------------------------------------------------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+input external delay                                                                                                                0.000     0.000
+pulse.inpad[0] (.input)                                                                                                             0.000     0.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].b[0] (m_adder)                          1.200     1.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].cout[0] (m_adder)                       0.100     1.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cin[0] (m_adder)                        1.200     2.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cout[0] (m_adder)                       0.100     2.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cin[0] (m_adder)                        1.200     3.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cout[0] (m_adder)                       0.100     3.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cin[0] (m_adder)                        1.200     5.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cout[0] (m_adder)                       0.100     5.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cin[0] (m_adder)                        1.200     6.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cout[0] (m_adder)                       0.100     6.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cin[0] (m_adder)                        1.200     7.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cout[0] (m_adder)                       0.100     7.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].cin[0] (m_adder)                        1.200     9.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[6].s[0] (m_adder)                          0.100     9.100
+out[6].D[0] (.latch)                                                                                                                1.200    10.300
+data arrival time                                                                                                                            10.300
+
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+clk.inpad[0] (.input)                                                                                                               0.000     0.000
+out[6].clk[0] (.latch)                                                                                                              1.200     1.200
+clock uncertainty                                                                                                                   0.000     1.200
+cell setup time                                                                                                                    -0.100     1.100
+data required time                                                                                                                            1.100
+---------------------------------------------------------------------------------------------------------------------------------------------------
+data required time                                                                                                                            1.100
+data arrival time                                                                                                                           -10.300
+---------------------------------------------------------------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                                                                             -9.200
+
+
+#Path 11
+Startpoint: pulse.inpad[0] (.input clocked by clk)
+Endpoint  : out[5].D[0] (.latch clocked by clk)
+Path Type : setup
+
+Point                                                                                                                                Incr      Path
+---------------------------------------------------------------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+input external delay                                                                                                                0.000     0.000
+pulse.inpad[0] (.input)                                                                                                             0.000     0.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].b[0] (m_adder)                          1.200     1.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].cout[0] (m_adder)                       0.100     1.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cin[0] (m_adder)                        1.200     2.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cout[0] (m_adder)                       0.100     2.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cin[0] (m_adder)                        1.200     3.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cout[0] (m_adder)                       0.100     3.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cin[0] (m_adder)                        1.200     5.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cout[0] (m_adder)                       0.100     5.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cin[0] (m_adder)                        1.200     6.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cout[0] (m_adder)                       0.100     6.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].cin[0] (m_adder)                        1.200     7.700
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[5].s[0] (m_adder)                          0.100     7.800
+out[5].D[0] (.latch)                                                                                                                1.200     9.000
+data arrival time                                                                                                                             9.000
+
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+clk.inpad[0] (.input)                                                                                                               0.000     0.000
+out[5].clk[0] (.latch)                                                                                                              1.200     1.200
+clock uncertainty                                                                                                                   0.000     1.200
+cell setup time                                                                                                                    -0.100     1.100
+data required time                                                                                                                            1.100
+---------------------------------------------------------------------------------------------------------------------------------------------------
+data required time                                                                                                                            1.100
+data arrival time                                                                                                                            -9.000
+---------------------------------------------------------------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                                                                             -7.900
+
+
+#Path 12
+Startpoint: pulse.inpad[0] (.input clocked by clk)
+Endpoint  : out[4].D[0] (.latch clocked by clk)
+Path Type : setup
+
+Point                                                                                                                                Incr      Path
+---------------------------------------------------------------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+input external delay                                                                                                                0.000     0.000
+pulse.inpad[0] (.input)                                                                                                             0.000     0.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].b[0] (m_adder)                          1.200     1.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].cout[0] (m_adder)                       0.100     1.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cin[0] (m_adder)                        1.200     2.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cout[0] (m_adder)                       0.100     2.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cin[0] (m_adder)                        1.200     3.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cout[0] (m_adder)                       0.100     3.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cin[0] (m_adder)                        1.200     5.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cout[0] (m_adder)                       0.100     5.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].cin[0] (m_adder)                        1.200     6.400
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[4].s[0] (m_adder)                          0.100     6.500
+out[4].D[0] (.latch)                                                                                                                1.200     7.700
+data arrival time                                                                                                                             7.700
+
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+clk.inpad[0] (.input)                                                                                                               0.000     0.000
+out[4].clk[0] (.latch)                                                                                                              1.200     1.200
+clock uncertainty                                                                                                                   0.000     1.200
+cell setup time                                                                                                                    -0.100     1.100
+data required time                                                                                                                            1.100
+---------------------------------------------------------------------------------------------------------------------------------------------------
+data required time                                                                                                                            1.100
+data arrival time                                                                                                                            -7.700
+---------------------------------------------------------------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                                                                             -6.600
+
+
+#Path 13
+Startpoint: pulse.inpad[0] (.input clocked by clk)
+Endpoint  : out[3].D[0] (.latch clocked by clk)
+Path Type : setup
+
+Point                                                                                                                                Incr      Path
+---------------------------------------------------------------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+input external delay                                                                                                                0.000     0.000
+pulse.inpad[0] (.input)                                                                                                             0.000     0.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].b[0] (m_adder)                          1.200     1.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].cout[0] (m_adder)                       0.100     1.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cin[0] (m_adder)                        1.200     2.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cout[0] (m_adder)                       0.100     2.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cin[0] (m_adder)                        1.200     3.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cout[0] (m_adder)                       0.100     3.900
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].cin[0] (m_adder)                        1.200     5.100
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[3].s[0] (m_adder)                          0.100     5.200
+out[3].D[0] (.latch)                                                                                                                1.200     6.400
+data arrival time                                                                                                                             6.400
+
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+clk.inpad[0] (.input)                                                                                                               0.000     0.000
+out[3].clk[0] (.latch)                                                                                                              1.200     1.200
+clock uncertainty                                                                                                                   0.000     1.200
+cell setup time                                                                                                                    -0.100     1.100
+data required time                                                                                                                            1.100
+---------------------------------------------------------------------------------------------------------------------------------------------------
+data required time                                                                                                                            1.100
+data arrival time                                                                                                                            -6.400
+---------------------------------------------------------------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                                                                             -5.300
+
+
+#Path 14
+Startpoint: pulse.inpad[0] (.input clocked by clk)
+Endpoint  : out[2].D[0] (.latch clocked by clk)
+Path Type : setup
+
+Point                                                                                                                                Incr      Path
+---------------------------------------------------------------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+input external delay                                                                                                                0.000     0.000
+pulse.inpad[0] (.input)                                                                                                             0.000     0.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].b[0] (m_adder)                          1.200     1.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].cout[0] (m_adder)                       0.100     1.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cin[0] (m_adder)                        1.200     2.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cout[0] (m_adder)                       0.100     2.600
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].cin[0] (m_adder)                        1.200     3.800
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[2].s[0] (m_adder)                          0.100     3.900
+out[2].D[0] (.latch)                                                                                                                1.200     5.100
+data arrival time                                                                                                                             5.100
+
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+clk.inpad[0] (.input)                                                                                                               0.000     0.000
+out[2].clk[0] (.latch)                                                                                                              1.200     1.200
+clock uncertainty                                                                                                                   0.000     1.200
+cell setup time                                                                                                                    -0.100     1.100
+data required time                                                                                                                            1.100
+---------------------------------------------------------------------------------------------------------------------------------------------------
+data required time                                                                                                                            1.100
+data arrival time                                                                                                                            -5.100
+---------------------------------------------------------------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                                                                             -4.000
+
+
+#Path 15
+Startpoint: pulse.inpad[0] (.input clocked by clk)
+Endpoint  : out[1].D[0] (.latch clocked by clk)
+Path Type : setup
+
+Point                                                                                                                                Incr      Path
+---------------------------------------------------------------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+input external delay                                                                                                                0.000     0.000
+pulse.inpad[0] (.input)                                                                                                             0.000     0.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].b[0] (m_adder)                          1.200     1.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].cout[0] (m_adder)                       0.100     1.300
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].cin[0] (m_adder)                        1.200     2.500
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[1].s[0] (m_adder)                          0.100     2.600
+out[1].D[0] (.latch)                                                                                                                1.200     3.800
+data arrival time                                                                                                                             3.800
+
+clock clk (rise edge)                                                                                                               0.000     0.000
+clock source latency                                                                                                                0.000     0.000
+clk.inpad[0] (.input)                                                                                                               0.000     0.000
+out[1].clk[0] (.latch)                                                                                                              1.200     1.200
+clock uncertainty                                                                                                                   0.000     1.200
+cell setup time                                                                                                                    -0.100     1.100
+data required time                                                                                                                            1.100
+---------------------------------------------------------------------------------------------------------------------------------------------------
+data required time                                                                                                                            1.100
+data arrival time                                                                                                                            -3.800
+---------------------------------------------------------------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                                                                             -2.700
+
+
+#Path 16
+Startpoint: out[1].Q[0] (.latch clocked by clk)
+Endpoint  : out:out[1].outpad[0] (.output clocked by clk)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+out[1].clk[0] (.latch)                                           1.200     1.200
+out[1].Q[0] (.latch) [clock-to-output]                           0.100     1.300
+out:out[1].outpad[0] (.output)                                   1.200     2.500
+data arrival time                                                          2.500
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                         0.000
+data arrival time                                                         -2.500
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -2.500
+
+
+#Path 17
+Startpoint: out[15].Q[0] (.latch clocked by clk)
+Endpoint  : out:out[15].outpad[0] (.output clocked by clk)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+out[15].clk[0] (.latch)                                          1.200     1.200
+out[15].Q[0] (.latch) [clock-to-output]                          0.100     1.300
+out:out[15].outpad[0] (.output)                                  1.200     2.500
+data arrival time                                                          2.500
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                         0.000
+data arrival time                                                         -2.500
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -2.500
+
+
+#Path 18
+Startpoint: out[14].Q[0] (.latch clocked by clk)
+Endpoint  : out:out[14].outpad[0] (.output clocked by clk)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+out[14].clk[0] (.latch)                                          1.200     1.200
+out[14].Q[0] (.latch) [clock-to-output]                          0.100     1.300
+out:out[14].outpad[0] (.output)                                  1.200     2.500
+data arrival time                                                          2.500
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                         0.000
+data arrival time                                                         -2.500
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -2.500
+
+
+#Path 19
+Startpoint: out[13].Q[0] (.latch clocked by clk)
+Endpoint  : out:out[13].outpad[0] (.output clocked by clk)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+out[13].clk[0] (.latch)                                          1.200     1.200
+out[13].Q[0] (.latch) [clock-to-output]                          0.100     1.300
+out:out[13].outpad[0] (.output)                                  1.200     2.500
+data arrival time                                                          2.500
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                         0.000
+data arrival time                                                         -2.500
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -2.500
+
+
+#Path 20
+Startpoint: out[12].Q[0] (.latch clocked by clk)
+Endpoint  : out:out[12].outpad[0] (.output clocked by clk)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+out[12].clk[0] (.latch)                                          1.200     1.200
+out[12].Q[0] (.latch) [clock-to-output]                          0.100     1.300
+out:out[12].outpad[0] (.output)                                  1.200     2.500
+data arrival time                                                          2.500
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                         0.000
+data arrival time                                                         -2.500
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -2.500
+
+
+#Path 21
+Startpoint: out[11].Q[0] (.latch clocked by clk)
+Endpoint  : out:out[11].outpad[0] (.output clocked by clk)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+out[11].clk[0] (.latch)                                          1.200     1.200
+out[11].Q[0] (.latch) [clock-to-output]                          0.100     1.300
+out:out[11].outpad[0] (.output)                                  1.200     2.500
+data arrival time                                                          2.500
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                         0.000
+data arrival time                                                         -2.500
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -2.500
+
+
+#Path 22
+Startpoint: out[10].Q[0] (.latch clocked by clk)
+Endpoint  : out:out[10].outpad[0] (.output clocked by clk)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+out[10].clk[0] (.latch)                                          1.200     1.200
+out[10].Q[0] (.latch) [clock-to-output]                          0.100     1.300
+out:out[10].outpad[0] (.output)                                  1.200     2.500
+data arrival time                                                          2.500
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                         0.000
+data arrival time                                                         -2.500
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -2.500
+
+
+#Path 23
+Startpoint: out[9].Q[0] (.latch clocked by clk)
+Endpoint  : out:out[9].outpad[0] (.output clocked by clk)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+out[9].clk[0] (.latch)                                           1.200     1.200
+out[9].Q[0] (.latch) [clock-to-output]                           0.100     1.300
+out:out[9].outpad[0] (.output)                                   1.200     2.500
+data arrival time                                                          2.500
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                         0.000
+data arrival time                                                         -2.500
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -2.500
+
+
+#Path 24
+Startpoint: out[8].Q[0] (.latch clocked by clk)
+Endpoint  : out:out[8].outpad[0] (.output clocked by clk)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+out[8].clk[0] (.latch)                                           1.200     1.200
+out[8].Q[0] (.latch) [clock-to-output]                           0.100     1.300
+out:out[8].outpad[0] (.output)                                   1.200     2.500
+data arrival time                                                          2.500
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                         0.000
+data arrival time                                                         -2.500
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -2.500
+
+
+#Path 25
+Startpoint: out[7].Q[0] (.latch clocked by clk)
+Endpoint  : out:out[7].outpad[0] (.output clocked by clk)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+out[7].clk[0] (.latch)                                           1.200     1.200
+out[7].Q[0] (.latch) [clock-to-output]                           0.100     1.300
+out:out[7].outpad[0] (.output)                                   1.200     2.500
+data arrival time                                                          2.500
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                         0.000
+data arrival time                                                         -2.500
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -2.500
+
+
+#Path 26
+Startpoint: out[6].Q[0] (.latch clocked by clk)
+Endpoint  : out:out[6].outpad[0] (.output clocked by clk)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+out[6].clk[0] (.latch)                                           1.200     1.200
+out[6].Q[0] (.latch) [clock-to-output]                           0.100     1.300
+out:out[6].outpad[0] (.output)                                   1.200     2.500
+data arrival time                                                          2.500
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                         0.000
+data arrival time                                                         -2.500
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -2.500
+
+
+#Path 27
+Startpoint: out[5].Q[0] (.latch clocked by clk)
+Endpoint  : out:out[5].outpad[0] (.output clocked by clk)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+out[5].clk[0] (.latch)                                           1.200     1.200
+out[5].Q[0] (.latch) [clock-to-output]                           0.100     1.300
+out:out[5].outpad[0] (.output)                                   1.200     2.500
+data arrival time                                                          2.500
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                         0.000
+data arrival time                                                         -2.500
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -2.500
+
+
+#Path 28
+Startpoint: out[4].Q[0] (.latch clocked by clk)
+Endpoint  : out:out[4].outpad[0] (.output clocked by clk)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+out[4].clk[0] (.latch)                                           1.200     1.200
+out[4].Q[0] (.latch) [clock-to-output]                           0.100     1.300
+out:out[4].outpad[0] (.output)                                   1.200     2.500
+data arrival time                                                          2.500
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                         0.000
+data arrival time                                                         -2.500
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -2.500
+
+
+#Path 29
+Startpoint: out[3].Q[0] (.latch clocked by clk)
+Endpoint  : out:out[3].outpad[0] (.output clocked by clk)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+out[3].clk[0] (.latch)                                           1.200     1.200
+out[3].Q[0] (.latch) [clock-to-output]                           0.100     1.300
+out:out[3].outpad[0] (.output)                                   1.200     2.500
+data arrival time                                                          2.500
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                         0.000
+data arrival time                                                         -2.500
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -2.500
+
+
+#Path 30
+Startpoint: out[2].Q[0] (.latch clocked by clk)
+Endpoint  : out:out[2].outpad[0] (.output clocked by clk)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+out[2].clk[0] (.latch)                                           1.200     1.200
+out[2].Q[0] (.latch) [clock-to-output]                           0.100     1.300
+out:out[2].outpad[0] (.output)                                   1.200     2.500
+data arrival time                                                          2.500
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                         0.000
+data arrival time                                                         -2.500
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -2.500
+
+
+#Path 31
+Startpoint: out[0].Q[0] (.latch clocked by clk)
+Endpoint  : out:out[0].outpad[0] (.output clocked by clk)
+Path Type : setup
+
+Point                                                             Incr      Path
+--------------------------------------------------------------------------------
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clk.inpad[0] (.input)                                            0.000     0.000
+out[0].clk[0] (.latch)                                           1.200     1.200
+out[0].Q[0] (.latch) [clock-to-output]                           0.100     1.300
+out:out[0].outpad[0] (.output)                                   1.200     2.500
+data arrival time                                                          2.500
+
+clock clk (rise edge)                                            0.000     0.000
+clock source latency                                             0.000     0.000
+clock uncertainty                                                0.000     0.000
+output external delay                                            0.000     0.000
+data required time                                                         0.000
+--------------------------------------------------------------------------------
+data required time                                                         0.000
+data arrival time                                                         -2.500
+--------------------------------------------------------------------------------
+slack (VIOLATED)                                                          -2.500
+
+
+#Path 32
+Startpoint: pulse.inpad[0] (.input clocked by clk)
+Endpoint  : out[0].D[0] (.latch clocked by clk)
+Path Type : setup
+
+Point                                                                                                                             Incr      Path
+------------------------------------------------------------------------------------------------------------------------------------------------
+clock clk (rise edge)                                                                                                            0.000     0.000
+clock source latency                                                                                                             0.000     0.000
+input external delay                                                                                                             0.000     0.000
+pulse.inpad[0] (.input)                                                                                                          0.000     0.000
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].b[0] (m_adder)                       1.200     1.200
+$abc$449$add$/workspace/prga_physical/prga/examples/app/8bitadd/src/adder.v:17$260.CARRY[0].s[0] (m_adder)                       0.100     1.300
+out[0].D[0] (.latch)                                                                                                             1.200     2.500
+data arrival time                                                                                                                          2.500
+
+clock clk (rise edge)                                                                                                            0.000     0.000
+clock source latency                                                                                                             0.000     0.000
+clk.inpad[0] (.input)                                                                                                            0.000     0.000
+out[0].clk[0] (.latch)                                                                                                           1.200     1.200
+clock uncertainty                                                                                                                0.000     1.200
+cell setup time                                                                                                                 -0.100     1.100
+data required time                                                                                                                         1.100
+------------------------------------------------------------------------------------------------------------------------------------------------
+data required time                                                                                                                         1.100
+data arrival time                                                                                                                         -2.500
+------------------------------------------------------------------------------------------------------------------------------------------------
+slack (VIOLATED)                                                                                                                          -1.400
+
+
+#End of timing report

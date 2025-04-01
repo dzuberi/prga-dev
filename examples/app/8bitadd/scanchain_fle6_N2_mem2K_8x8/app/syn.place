@@ -1,0 +1,5 @@
+Netlist_File: pack.out Netlist_ID: SHA256:4198e68771dfe74029cfc994fdc53d2f30b427b9b352f04abc13fccbafda7b85
+Array size: 10 x 10 logic blocks
+
+#block name	x	y	subblk	layer	block number
+#----------	--	--	------	-----	------------
