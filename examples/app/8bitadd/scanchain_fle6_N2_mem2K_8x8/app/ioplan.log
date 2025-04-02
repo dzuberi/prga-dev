@@ -1,7 +1,0 @@
-[INFO] Parsing architecture context (or summary): summary.pkl
-[INFO] Context summary unpickled from summary.pkl
-[INFO] Extracting application interface: syn.eblif
-[INFO] Parsing partial IO constraints: ioconst.txt
-[INFO] Autoplanning IO constraints ...
-[INFO] Writing constraints ...
-[INFO] Constraints generated. Bye

@@ -4,8 +4,8 @@ app:
     name: adder
     sources:
         - ../../src/adder.v
-# constraints:
-#     io: io.partial
+constraints:
+    io: io.partial
 tests:
     basic:
         sources:
