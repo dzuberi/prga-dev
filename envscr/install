@@ -52,8 +52,8 @@ if [ -z "${CMAKE}" ]; then
     if [ -z "${CMAKE}" ]; then
         err "'cmake' not found" && exit 1
         exit 1
-    elif [[ $( ${CMAKE} --version | cut -d " " -f 3 ) != "3"* ]]; then
-        err "CMake 3.x is required to build VPR" && exit 1
+    elif [[ $( ${CMAKE} --version | cut -d " " -f 3 ) != [34]* ]]; then
+        err "CMake 3.x or 4.x is required to build VPR" && exit 1
     fi
 fi
 info "Using 'cmake': ${CMAKE}"
