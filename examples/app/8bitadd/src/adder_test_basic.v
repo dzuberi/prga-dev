@@ -25,18 +25,20 @@ end
 always @(posedge tb_clk) begin
     if (tb_rst || ~tb_prog_done) begin 
         pulse <= 1'b0;
-        out_exp <= 16'b0;
+        out_exp <= 8'b0;
         cycle = 0;
+        fail = 0;
     end else begin 
         pulse <= ~pulse;
-        out_exp[15] <= pulse;
-        out_exp[14:0] <= {16-1{~pulse}};
+        out_exp[0] <= ~pulse;
+        // out_exp[7] <= pulse;
+        // out_exp[6:0] <= {(8-1){~pulse}};
         $display("cycle: %d", cycle);
         $display("out: %b", out);
         $display("out_exp: %b", out_exp);
         if (cycle > 0) begin
             if (out != out_exp) begin
-                fail = 0;
+                fail = 1;
             end
             if (cycle >= 1000) begin
                 if (fail == 0) begin

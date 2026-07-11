@@ -1,0 +1,12 @@
+context: ../../../../fpga/scanchain/fle6_4x4_cyclefree/ctx.pkl
+compiler: iverilog
+app:
+    name: adder
+    sources:
+        - ../../src/adder.v
+constraints:
+    io: io.partial
+tests:
+    basic:
+        sources:
+            - ../../src/adder_test_basic.v
