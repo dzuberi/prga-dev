@@ -9,13 +9,13 @@ module basic (
     
     output wire clk,
     output reg pulse,
-    input wire[15:0] out
+    input wire out
 );
 
 assign clk = tb_clk;
 
 reg fail = 0;
-reg[15:0] out_exp;
+reg out_exp;
 reg[31:0] cycle = 0;
 
 initial begin
@@ -25,12 +25,12 @@ end
 always @(posedge tb_clk) begin
     if (tb_rst || ~tb_prog_done) begin 
         pulse <= 1'b0;
-        out_exp <= 8'b0;
+        out_exp <= 'b0;
         cycle = 0;
         fail = 0;
     end else begin 
         pulse <= ~pulse;
-        out_exp[0] <= ~pulse;
+        out_exp <= ~pulse;
         // out_exp[7] <= pulse;
         // out_exp[6:0] <= {(8-1){~pulse}};
         $display("cycle: %d", cycle);
